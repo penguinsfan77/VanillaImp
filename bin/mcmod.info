@@ -1,0 +1,21 @@
+[
+{
+  "modid": "randomstuff",
+  "name": "Random Stuff",
+  "description": "A mod for Minecraft that adds all the random shit that comes out of my head!",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": [
+    "penguinsgan77"
+  ],
+  "credits": "Code: penguinsfan77",
+  "logoFile": "",
+  "screenshots": [
+  ],
+  "parent":"",
+  "dependencies": [
+  ]
+}
+]
