@@ -1,0 +1,12 @@
+package io.github.penguinsfan77.randomstuff.items;
+
+public class Trident extends ModItem {
+	
+	public Trident() {
+		
+		super();
+		this.setUnlocalizedName("trident");
+		
+	}
+
+}

@@ -1,0 +1,17 @@
+package io.github.penguinsfan77.randomstuff.items;
+
+import cpw.mods.fml.common.registry.GameRegistry;
+
+public class ModItems {
+	
+	//Create items
+	public static final ModItem trident = new Trident();
+	
+	public static void init() {
+		
+		//Register the items
+		GameRegistry.registerItem(trident, "trident");
+	
+	}
+
+}

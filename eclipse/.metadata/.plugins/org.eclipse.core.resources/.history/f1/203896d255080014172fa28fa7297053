@@ -1,0 +1,15 @@
+package io.github.penguinsfan77.randomstuff.blocks;
+
+import cpw.mods.fml.common.registry.GameRegistry;
+
+public class ModBlocks {
+	
+	//Create the blocks
+
+    public static void init() {
+        
+    	//Register the blocks
+    	
+    }
+
+}
