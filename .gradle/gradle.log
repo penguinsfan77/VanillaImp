@@ -1,5 +1,3 @@
-The assetDir is deprecated!  Use runDir instead! runDir set to run/assets/..The assetDir is deprecated!  Use runDir instead! runDir set to run/assets/..
-
 ****************************
  Powered By MCP:            
  http://mcp.ocean-labs.de/  
@@ -8,10 +6,15 @@ The assetDir is deprecated!  Use runDir instead! runDir set to run/assets/..The 
  MCP Data version : unknown
 ****************************
 :eclipseClasspath
+Download https://libraries.minecraft.net/com/mojang/authlib/1.5.16/authlib-1.5.16-sources.jar
+Download http://repo1.maven.org/maven2/com/google/guava/guava/17.0/guava-17.0-sources.jar
+Download http://repo1.maven.org/maven2/com/google/guava/guava/17.0/guava-17.0-javadoc.jar
+Download http://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.3.2/commons-lang3-3.3.2-sources.jar
+Download http://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.3.2/commons-lang3-3.3.2-javadoc.jar
 :eclipseJdt
 :eclipseProject
 :eclipse
 
 BUILD SUCCESSFUL
 
-Total time: 21.806 secs
+Total time: 37.014 secs

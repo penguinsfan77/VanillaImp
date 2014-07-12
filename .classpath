@@ -4,7 +4,7 @@
 	<classpathentry kind="src" path="src/main/java"/>
 	<classpathentry kind="src" path="src/main/resources"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER" exported="true"/>
-	<classpathentry sourcepath="C:/Users/Jacob/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.0.1179/forgeSrc-1.7.10-10.13.0.1179-sources.jar" kind="lib" path="C:/Users/Jacob/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.0.1179/forgeSrc-1.7.10-10.13.0.1179.jar" exported="true"/>
+	<classpathentry sourcepath="C:/Users/Jacob/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.0.1180/forgeSrc-1.7.10-10.13.0.1180-sources.jar" kind="lib" path="C:/Users/Jacob/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.0.1180/forgeSrc-1.7.10-10.13.0.1180.jar" exported="true"/>
 	<classpathentry kind="lib" path="C:/Users/Jacob/.gradle/caches/modules-2/files-2.1/net.minecraft/launchwrapper/1.9/116f2aad5b0c68353ebed66cd463517db6522f7e/launchwrapper-1.9.jar" exported="true"/>
 	<classpathentry sourcepath="C:/Users/Jacob/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-debug-all/4.1/1c218d5a0b8b932a1528b74069aa6973dcfcea74/asm-debug-all-4.1-sources.jar" kind="lib" path="C:/Users/Jacob/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm-debug-all/4.1/dd6ba5c392d4102458494e29f54f70ac534ec2a2/asm-debug-all-4.1.jar" exported="true">
 		<attributes>
@@ -60,7 +60,7 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="C:/Users/Jacob/.gradle/caches/modules-2/files-2.1/lzma/lzma/0.0.1/521616dc7487b42bef0e803bd2fa3faf668101d7/lzma-0.0.1.jar" exported="true"/>
-	<classpathentry kind="lib" path="C:/Users/Jacob/.gradle/caches/modules-2/files-2.1/com.mojang/realms/1.2.9/7a9bbba734e7d11871f02d56d07f91b5d88c30dd/realms-1.2.9.jar" exported="true"/>
+	<classpathentry kind="lib" path="C:/Users/Jacob/.gradle/caches/modules-2/files-2.1/com.mojang/realms/1.3.1/f78f5a841b1cf9d50c3382acdbeb7d3078e454d6/realms-1.3.1.jar" exported="true"/>
 	<classpathentry sourcepath="C:/Users/Jacob/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-compress/1.8.1/3caea4421428752206c7a94c3e3097f0c47f1bb8/commons-compress-1.8.1-sources.jar" kind="lib" path="C:/Users/Jacob/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-compress/1.8.1/a698750c16740fd5b3871425f4cb3bbaa87f529d/commons-compress-1.8.1.jar" exported="true">
 		<attributes>
 			<attribute name="javadoc_location" value="jar:file:/C:/Users/Jacob/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-compress/1.8.1/8e9724537be2a09287d7483c6b4a0c9a0bddf944/commons-compress-1.8.1-javadoc.jar!/"/>
@@ -102,16 +102,6 @@
 			<attribute name="javadoc_location" value="jar:file:/C:/Users/Jacob/.gradle/caches/modules-2/files-2.1/io.netty/netty-all/4.0.10.Final/ad2aaec88757a42d6f6dc9b365c45a807131b5fa/netty-all-4.0.10.Final-javadoc.jar!/"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry sourcepath="C:/Users/Jacob/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/16.0/74949eedaf5f77499950d50549f2675407e03075/guava-16.0-sources.jar" kind="lib" path="C:/Users/Jacob/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/16.0/aca09d2e5e8416bf91550e72281958e35460be52/guava-16.0.jar" exported="true">
-		<attributes>
-			<attribute name="javadoc_location" value="jar:file:/C:/Users/Jacob/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/16.0/89852715f2647b4135fe1317e14100b31178b4c9/guava-16.0-javadoc.jar!/"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry sourcepath="C:/Users/Jacob/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.2.1/77e5da73ecc389bda26f9953fd91e9b53b571a6f/commons-lang3-3.2.1-sources.jar" kind="lib" path="C:/Users/Jacob/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.2.1/66f13681add50ca9e4546ffabafaaac7645db3cf/commons-lang3-3.2.1.jar" exported="true">
-		<attributes>
-			<attribute name="javadoc_location" value="jar:file:/C:/Users/Jacob/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.2.1/f1fcd065d0f8cf94e254cd4c2eb2aa2712573ad8/commons-lang3-3.2.1-javadoc.jar!/"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry sourcepath="C:/Users/Jacob/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/2.4/f2d8698c46d1167ff24b06a840a87d91a02db891/commons-io-2.4-sources.jar" kind="lib" path="C:/Users/Jacob/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/2.4/b1b6ea3b7e4aa4f492509a4952029cd8e48019ad/commons-io-2.4.jar" exported="true">
 		<attributes>
 			<attribute name="javadoc_location" value="jar:file:/C:/Users/Jacob/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/2.4/3b5b0183c509963d5ffdf0d9d452a4a7521aeaa3/commons-io-2.4-javadoc.jar!/"/>
@@ -138,7 +128,7 @@
 			<attribute name="javadoc_location" value="jar:file:/C:/Users/Jacob/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.2.4/edf793f307583c05c23d2bff956e1a10ead8702c/gson-2.2.4-javadoc.jar!/"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Jacob/.gradle/caches/modules-2/files-2.1/com.mojang/authlib/1.5.13/260f1d004e6ac3b359c96bd12a6c9a937e5378ec/authlib-1.5.13.jar" exported="true"/>
+	<classpathentry kind="lib" path="C:/Users/Jacob/.gradle/caches/modules-2/files-2.1/com.mojang/authlib/1.5.16/ef1582b11fd0943d069cdcb72e99008ac209a283/authlib-1.5.16.jar" exported="true"/>
 	<classpathentry sourcepath="C:/Users/Jacob/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-api/2.0-beta9/c6682b8a47ddd9f29108838aed0dc8e0ffdedf68/log4j-api-2.0-beta9-sources.jar" kind="lib" path="C:/Users/Jacob/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-api/2.0-beta9/1dd66e68cccd907880229f9e2de1314bd13ff785/log4j-api-2.0-beta9.jar" exported="true">
 		<attributes>
 			<attribute name="javadoc_location" value="jar:file:/C:/Users/Jacob/.gradle/caches/modules-2/files-2.1/org.apache.logging.log4j/log4j-api/2.0-beta9/204e63d075caf4035707a92bab186517e2b28bab/log4j-api-2.0-beta9-javadoc.jar!/"/>
@@ -212,5 +202,15 @@
 			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="C:/Users/Jacob/Documents/Video Games/Minecraft/Modding/Mods/RandomStuff/build/natives"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Jacob/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.0.1179/start" exported="true"/>
+	<classpathentry sourcepath="C:/Users/Jacob/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/17.0/7ca0efbeb87ca845b5d7a0ac9c21a4b7b95f7b28/guava-17.0-sources.jar" kind="lib" path="C:/Users/Jacob/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/17.0/9c6ef172e8de35fd8d4d8783e4821e57cdef7445/guava-17.0.jar" exported="true">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/Jacob/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/17.0/18a375325d213ba5ae90706790fbbb3fd51b9a01/guava-17.0-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry sourcepath="C:/Users/Jacob/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.3.2/d2a489573c0ed2c4942b3660decad5d65087b406/commons-lang3-3.3.2-sources.jar" kind="lib" path="C:/Users/Jacob/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.3.2/90a3822c38ec8c996e84c16a3477ef632cbc87a3/commons-lang3-3.3.2.jar" exported="true">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/Jacob/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.3.2/43ffe692648166363bceadc63ac76c7d19b4ebd7/commons-lang3-3.3.2-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/Jacob/.gradle/caches/minecraft/net/minecraftforge/forge/1.7.10-10.13.0.1180/start" exported="true"/>
 </classpath>

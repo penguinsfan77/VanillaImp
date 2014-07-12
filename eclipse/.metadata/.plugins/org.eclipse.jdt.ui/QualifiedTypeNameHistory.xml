@@ -22,9 +22,11 @@
 <fullyQualifiedTypeName name="cpw.mods.fml.relauncher.Side"/>
 <fullyQualifiedTypeName name="net.minecraft.client.renderer.texture.IIconRegister"/>
 <fullyQualifiedTypeName name="net.minecraft.item.ItemStack"/>
-<fullyQualifiedTypeName name="io.github.penguinsfan77.randomstuff.items.ModItems"/>
 <fullyQualifiedTypeName name="io.github.penguinsfan77.randomstuff.blocks.ModBlocks"/>
 <fullyQualifiedTypeName name="cpw.mods.fml.common.registry.GameRegistry.ObjectHolder"/>
-<fullyQualifiedTypeName name="io.github.penguinsfan77.randomstuff.references.Reference"/>
 <fullyQualifiedTypeName name="cpw.mods.fml.common.registry.GameRegistry"/>
+<fullyQualifiedTypeName name="net.minecraft.creativetab.CreativeTabs"/>
+<fullyQualifiedTypeName name="io.github.penguinsfan77.randomstuff.references.Reference"/>
+<fullyQualifiedTypeName name="io.github.penguinsfan77.randomstuff.items.ModItems"/>
+<fullyQualifiedTypeName name="io.github.penguinsfan77.randomstuff.creativeTab.ModCreativeTab"/>
 </qualifiedTypeNameHistroy>
