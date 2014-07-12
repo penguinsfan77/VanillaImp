@@ -1,6 +1,5 @@
 package io.github.penguinsfan77.randomstuff.items;
 
-import io.github.penguinsfan77.randomstuff.creativeTab.ModCreativeTab;
 import io.github.penguinsfan77.randomstuff.references.Reference;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -14,8 +13,6 @@ public class ModItem extends Item {
 	public ModItem() {
 		
         super();
-        
-        this.setCreativeTab(ModCreativeTab.RANDOM_STUFF_TAB);
         
     }
 
