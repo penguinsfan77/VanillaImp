@@ -1,3 +1,6 @@
-item.randomstuff:trident.name= Trident
+item.randomstuff:stone_trident.name= Stone Trident
+item.randomstuff:gold_trident.name= Gold Trident
+item.randomstuff:iron_trident.name= Iron Trident
+item.randomstuff:diamond_trident.name= Diamond Trident
 tile.randomstuff:blackBlock.name= Black
 tile.randomstuff:crackedStone.name= Cracked Stone
