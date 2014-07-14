@@ -29,4 +29,5 @@
 <fullyQualifiedTypeName name="io.github.penguinsfan77.randomstuff.items.ModItems"/>
 <fullyQualifiedTypeName name="io.github.penguinsfan77.randomstuff.creativeTab.ModCreativeTab"/>
 <fullyQualifiedTypeName name="cpw.mods.fml.common.registry.GameRegistry"/>
+<fullyQualifiedTypeName name="net.minecraft.item.ItemSword"/>
 </qualifiedTypeNameHistroy>

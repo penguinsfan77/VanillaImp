@@ -7,7 +7,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 public class ModItems {
 	
 	//Create items
-	public static final ModItem trident = new Trident();
+	public static final ModItemSword trident = new Trident();
 	
 	public static void init() {
 		

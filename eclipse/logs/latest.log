@@ -1,29 +1,32 @@
-[14:07:21] [main/INFO]: Setting user: ForgeDevName
-[14:07:25] [Client thread/INFO]: LWJGL Version: 2.9.1
-[14:07:34] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Random Stuff
-[14:07:35] [Sound Library Loader/INFO]: Sound engine started
-[14:07:38] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[14:07:39] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[14:07:39] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Random Stuff
-[14:07:39] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
-[14:07:40] [Client thread/INFO]: Created: 256x256 textures/items-atlas
-[14:07:41] [Sound Library Loader/INFO]: Sound engine started
-[14:07:55] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
-[14:07:55] [Server thread/INFO]: Generating keypair
-[14:07:56] [Server thread/INFO]: Preparing start region for level 0
-[14:07:57] [Server thread/INFO]: Preparing spawn area: 41%
-[14:07:58] [Server thread/INFO]: Changing view distance to 8, from 10
-[14:07:59] [Server thread/INFO]: ForgeDevName[local:E:c1add8b3] logged in with entity id 258 at (-485.4766585815884, 7.230405802501288, 724.9993603214406)
-[14:07:59] [Server thread/INFO]: ForgeDevName joined the game
-[14:08:34] [Client thread/INFO]: [CHAT] Saved screenshot as 2014-07-13_14.08.33.png
-[14:08:36] [Server thread/INFO]: Saving and pausing game...
-[14:08:36] [Server thread/INFO]: Saving chunks for level 'Dev World'/Overworld
-[14:08:36] [Server thread/INFO]: Saving chunks for level 'Dev World'/Nether
-[14:08:36] [Server thread/INFO]: Saving chunks for level 'Dev World'/The End
-[14:08:38] [Server thread/INFO]: Stopping server
-[14:08:38] [Server thread/INFO]: Saving players
-[14:08:38] [Server thread/INFO]: Saving worlds
-[14:08:38] [Server thread/INFO]: Saving chunks for level 'Dev World'/Overworld
-[14:08:38] [Server thread/INFO]: Saving chunks for level 'Dev World'/Nether
-[14:08:38] [Server thread/INFO]: Saving chunks for level 'Dev World'/The End
-[14:08:39] [Client thread/INFO]: Stopping!
+[11:51:08] [main/INFO]: Setting user: ForgeDevName
+[11:51:10] [Client thread/INFO]: LWJGL Version: 2.9.1
+[11:51:18] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Random Stuff
+[11:51:19] [Sound Library Loader/INFO]: Sound engine started
+[11:51:21] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[11:51:21] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[11:51:22] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Random Stuff
+[11:51:22] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[11:51:22] [Client thread/INFO]: Created: 256x256 textures/items-atlas
+[11:51:23] [Sound Library Loader/INFO]: Sound engine started
+[11:51:33] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[11:51:33] [Server thread/INFO]: Generating keypair
+[11:51:34] [Server thread/INFO]: Preparing start region for level 0
+[11:51:34] [Server thread/INFO]: Changing view distance to 8, from 10
+[11:51:36] [Server thread/INFO]: ForgeDevName[local:E:f5b3e957] logged in with entity id 185 at (-483.3657673254274, 4.0, 719.7597443221613)
+[11:51:36] [Server thread/INFO]: ForgeDevName joined the game
+[11:51:49] [Server thread/INFO]: [ForgeDevName: Set own game mode to Creative Mode]
+[11:51:49] [Client thread/INFO]: [CHAT] Your game mode has been updated
+[11:52:10] [Client thread/INFO]: [CHAT] randomstuff:trident, randomstuff:crackedStone, randomstuff:blackBlock
+[11:52:11] [Server thread/INFO]: [ForgeDevName: Given [Trident] * 1 to ForgeDevName]
+[11:52:11] [Client thread/INFO]: [CHAT] Given [Trident] * 1 to ForgeDevName
+[11:53:09] [Server thread/INFO]: Saving and pausing game...
+[11:53:09] [Server thread/INFO]: Saving chunks for level 'Dev World'/Overworld
+[11:53:09] [Server thread/INFO]: Saving chunks for level 'Dev World'/Nether
+[11:53:09] [Server thread/INFO]: Saving chunks for level 'Dev World'/The End
+[11:53:10] [Server thread/INFO]: Stopping server
+[11:53:10] [Server thread/INFO]: Saving players
+[11:53:10] [Server thread/INFO]: Saving worlds
+[11:53:10] [Server thread/INFO]: Saving chunks for level 'Dev World'/Overworld
+[11:53:10] [Server thread/INFO]: Saving chunks for level 'Dev World'/Nether
+[11:53:10] [Server thread/INFO]: Saving chunks for level 'Dev World'/The End
+[11:53:10] [Client thread/INFO]: Stopping!
