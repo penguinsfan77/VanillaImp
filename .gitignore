@@ -2,10 +2,8 @@
 ## Eclipse
 #################
 
-.project
 bin/
 eclipse/
-.classpath
 .settings/
 
 #################
