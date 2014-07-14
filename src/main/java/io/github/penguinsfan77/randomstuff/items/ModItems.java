@@ -11,7 +11,6 @@ public class ModItems {
 	public static final ModItemSword gold_trident = new GoldTrident();
 	public static final ModItemSword iron_trident = new IronTrident();
 	public static final ModItemSword diamond_trident = new DiamondTrident();
-	public static final ModItem thrower = new Thrower();
 	
 	public static void init() {
 		
@@ -20,7 +19,6 @@ public class ModItems {
 		GameRegistry.registerItem(gold_trident, "gold_trident");
 		GameRegistry.registerItem(iron_trident, "iron_trident");
 		GameRegistry.registerItem(diamond_trident, "diamond_trident");
-		GameRegistry.registerItem(thrower, "thrower");
 	
 	}
 
