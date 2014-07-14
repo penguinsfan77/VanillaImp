@@ -1,5 +1,5 @@
-.gradle
-.settings
+.gradle/**
+.settings/**
 bin/**
 build/**
 eclipse/**
