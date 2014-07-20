@@ -1,5 +1,6 @@
 package io.github.penguinsfan77.randomstuff.items;
 
+import net.minecraft.item.Item.ToolMaterial;
 import io.github.penguinsfan77.randomstuff.references.Reference;
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -7,10 +8,10 @@ import cpw.mods.fml.common.registry.GameRegistry;
 public class ModItems {
 	
 	//Create items
-	public static final ModItemSword stone_trident = new StoneTrident();
-	public static final ModItemSword gold_trident = new GoldTrident();
-	public static final ModItemSword iron_trident = new IronTrident();
-	public static final ModItemSword diamond_trident = new DiamondTrident();
+	public static final ModItemSword stone_trident = new Trident(ToolMaterial.STONE);
+	public static final ModItemSword gold_trident = new Trident(ToolMaterial.GOLD);
+	public static final ModItemSword iron_trident = new Trident(ToolMaterial.IRON);
+	public static final ModItemSword diamond_trident = new Trident(ToolMaterial.EMERALD);
 	
 	public static void init() {
 		

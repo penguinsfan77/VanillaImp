@@ -7,19 +7,12 @@ import net.minecraft.item.Item;
 
 public class ModCreativeTab {
 	
-	public static final CreativeTabs RANDOM_STUFF_TAB = new CreativeTabs(Reference.MOD_ID) {
+	public static final CreativeTabs RANDOM_STUFF_TAB = new CreativeTabs(Reference.MOD_ID.toLowerCase()) {
 		
 		@Override
 		public Item getTabIconItem() {
 			
 			return ModItems.gold_trident;
-			
-		}
-		
-		@Override
-		public String getTranslatedTabLabel() {
-			
-			return "Random Stuff";
 			
 		}
 		
