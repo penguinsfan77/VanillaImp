@@ -3,14 +3,14 @@
   "modid": "randomstuff",
   "name": "Random Stuff",
   "description": "A mod for Minecraft that adds all the random shit that comes out of my head!",
-  "version": "${version}",
-  "mcversion": "${mcversion}",
+  "version": "0.0.1",
+  "mcversion": "1.7.10",
   "url": "",
   "updateUrl": "",
   "authorList": [
     "penguinsgan77"
   ],
-  "credits": "Code: penguinsfan77",
+  "credits": "Pahimar for his Lets Mod Reboot series",
   "logoFile": "",
   "screenshots": [
   ],

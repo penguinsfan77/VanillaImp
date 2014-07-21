@@ -5,6 +5,8 @@
 bin/
 eclipse/
 .settings/
+.classpath
+.project
 
 #################
 ## Gradle
