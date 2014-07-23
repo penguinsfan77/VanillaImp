@@ -13,6 +13,8 @@ public class ModItems {
 	public static final ModItemSword iron_trident = new Trident(ToolMaterial.IRON);
 	public static final ModItemSword diamond_trident = new Trident(ToolMaterial.EMERALD);
 	
+	public static final ModItem hammer = new Hammer();
+	
 	public static void init() {
 		
 		//Register the items
@@ -20,6 +22,8 @@ public class ModItems {
 		GameRegistry.registerItem(gold_trident, "gold_trident");
 		GameRegistry.registerItem(iron_trident, "iron_trident");
 		GameRegistry.registerItem(diamond_trident, "diamond_trident");
+		
+		GameRegistry.registerItem(hammer, "hammer");
 	
 	}
 

@@ -1,7 +1,9 @@
 package io.github.penguinsfan77.randomstuff;
 
+import io.github.penguinsfan77.randomstuff.blocks.ModBlockRecipes;
 import io.github.penguinsfan77.randomstuff.blocks.ModBlocks;
 import io.github.penguinsfan77.randomstuff.handlers.ConfigHandler;
+import io.github.penguinsfan77.randomstuff.items.ModItemRecipes;
 import io.github.penguinsfan77.randomstuff.items.ModItems;
 import io.github.penguinsfan77.randomstuff.proxy.IProxy;
 import io.github.penguinsfan77.randomstuff.references.Reference;
@@ -44,7 +46,9 @@ public class RandomStuff {
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
     	
-        
+        //Register recipes
+    	ModItemRecipes.init();
+    	ModBlockRecipes.init();
         
     }
 

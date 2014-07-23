@@ -5,6 +5,7 @@ item.randomstuff:stone_trident.name=Stone Trident
 item.randomstuff:gold_trident.name=Gold Trident
 item.randomstuff:iron_trident.name=Iron Trident
 item.randomstuff:emerald_trident.name=Diamond Trident
+item.randomstuff:hammer.name=Hammer
 
 ############
 ## Blocks ##
