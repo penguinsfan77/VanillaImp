@@ -1,0 +1,60 @@
+#navbar, #navbar li ul {
+	position: relative;
+	margin: 0;
+	padding: 0px;
+	list-style-type: none;
+	text-align: center;
+}
+
+#navbar > li {
+	float: left;
+}
+
+#navbar li {
+	display: block;
+	padding: 0 1.5em;
+}
+
+#navbar li a {
+	text-decoration: none;
+	color: #fff;
+}
+
+#navbar li:hover, li a:hover {
+	color: #000;
+	background-color: #b5e853;
+}
+
+#navbar li ul {
+	display: none;
+	margin-left: -24px;
+	background-color: #b5e853;
+	position: absolute;
+	z-index: 999;
+}
+
+#navbar li:hover ul {
+	display: block;
+}
+
+#navbar li ul li {
+	height: 20px;
+}
+
+#navbar li ul li a {
+	text-decoration: none;
+	color: #000;
+	height: 20px;
+}
+
+#navbar li ul li:hover, #navbar li ul li a:hover {
+	background-color: #a1c03f;
+}
+
+#navbar li:hover:before, #navbar li ul li:hover:before, #navbar li ul li:before {
+	content: ">>";
+	height: 30px;
+	font-size: 13px;
+	color: #000;
+	margin-right: 20px;
+}
