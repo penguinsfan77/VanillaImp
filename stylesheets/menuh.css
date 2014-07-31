@@ -20,9 +20,13 @@
 	color: #fff;
 }
 
-#navbar li:hover, li a:hover {
+#navbar li:hover {
 	color: #000;
 	background-color: #b5e853;
+}
+
+#navbar li:hover > a {
+	color: #000;
 }
 
 #navbar li ul {
