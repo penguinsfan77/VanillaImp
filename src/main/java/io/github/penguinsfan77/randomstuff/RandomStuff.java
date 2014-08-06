@@ -1,7 +1,9 @@
 package io.github.penguinsfan77.randomstuff;
 
+import net.minecraftforge.common.MinecraftForge;
 import io.github.penguinsfan77.randomstuff.blocks.ModBlockRecipes;
 import io.github.penguinsfan77.randomstuff.blocks.ModBlocks;
+import io.github.penguinsfan77.randomstuff.events.ItemEventHandler;
 import io.github.penguinsfan77.randomstuff.handlers.ConfigHandler;
 import io.github.penguinsfan77.randomstuff.items.ModItemRecipes;
 import io.github.penguinsfan77.randomstuff.items.ModItems;
@@ -49,6 +51,9 @@ public class RandomStuff {
         //Register recipes
     	ModItemRecipes.init();
     	ModBlockRecipes.init();
+    	
+    	//Register event handlers
+    	MinecraftForge.EVENT_BUS.register(new ItemEventHandler());
         
     }
 

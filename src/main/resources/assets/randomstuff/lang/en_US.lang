@@ -5,13 +5,30 @@ item.randomstuff:stone_trident.name=Stone Trident
 item.randomstuff:gold_trident.name=Gold Trident
 item.randomstuff:iron_trident.name=Iron Trident
 item.randomstuff:emerald_trident.name=Diamond Trident
+
 item.randomstuff:hammer.name=Hammer
+
+item.randomstuff:colored_stick.white.name=White Stick
+item.randomstuff:colored_stick.orange.name=Orange Stick
+item.randomstuff:colored_stick.magenta.name=Magenta Stick
+item.randomstuff:colored_stick.light_blue.name=Light Blue Stick
+item.randomstuff:colored_stick.yellow.name=Yellow Stick
+item.randomstuff:colored_stick.lime.name=Lime Stick
+item.randomstuff:colored_stick.pink.name=Pink Stick
+item.randomstuff:colored_stick.gray.name=Gray Stick
+item.randomstuff:colored_stick.light_gray.name=Light Gray Stick
+item.randomstuff:colored_stick.cyan.name=Cyan Stick
+item.randomstuff:colored_stick.purple.name=Purple Stick
+item.randomstuff:colored_stick.blue.name=Blue Stick
+item.randomstuff:colored_stick.brown.name=Brown Stick
+item.randomstuff:colored_stick.green.name=Green Stick
+item.randomstuff:colored_stick.red.name=Red Stick
+item.randomstuff:colored_stick.black.name=Black Stick
 
 ############
 ## Blocks ##
 ############
-tile.randomstuff:blackBlock.name=Black
-tile.randomstuff:crackedStone.name=Cracked Stone
+tile.randomstuff:cracked_stone.name=Cracked Stone
 
 ##################
 ## Creative Tab ##

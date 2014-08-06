@@ -2,6 +2,7 @@ package io.github.penguinsfan77.randomstuff.items;
 
 import io.github.penguinsfan77.randomstuff.creativeTab.ModCreativeTab;
 import io.github.penguinsfan77.randomstuff.references.Reference;
+import io.github.penguinsfan77.randomstuff.references.Textures;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -23,7 +24,7 @@ public class ModItem extends Item {
     @Override
     public String getUnlocalizedName() {
     	
-        return String.format("item.%s%s", Reference.MOD_ID.toLowerCase() + ":", getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
+        return String.format("item.%s%s", Textures.PREFIX, getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
     
     }
 
@@ -31,7 +32,7 @@ public class ModItem extends Item {
     @Override
     public String getUnlocalizedName(ItemStack itemStack) {
     	
-        return String.format("item.%s%s", Reference.MOD_ID.toLowerCase() + ":", getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
+        return String.format("item.%s%s", Textures.PREFIX, getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
     
     }
 

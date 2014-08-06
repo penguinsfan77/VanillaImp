@@ -1,6 +1,8 @@
 package io.github.penguinsfan77.randomstuff.items;
 
 import net.minecraft.item.Item.ToolMaterial;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.oredict.OreDictionary;
 import io.github.penguinsfan77.randomstuff.references.Reference;
 import cpw.mods.fml.common.registry.GameRegistry;
 
@@ -15,6 +17,8 @@ public class ModItems {
 	
 	public static final ModItem hammer = new Hammer();
 	
+	public static final ModItem coloredStick = new ColoredStick();
+	
 	public static void init() {
 		
 		//Register the items
@@ -24,6 +28,9 @@ public class ModItems {
 		GameRegistry.registerItem(diamond_trident, "diamond_trident");
 		
 		GameRegistry.registerItem(hammer, "hammer");
+		
+		GameRegistry.registerItem(coloredStick, "colored_stick");
+		OreDictionary.registerOre("stickWood", new ItemStack(coloredStick, 1, OreDictionary.WILDCARD_VALUE));
 	
 	}
 

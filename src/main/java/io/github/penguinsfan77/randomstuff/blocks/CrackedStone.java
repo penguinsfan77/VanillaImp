@@ -1,5 +1,7 @@
 package io.github.penguinsfan77.randomstuff.blocks;
 
+import io.github.penguinsfan77.randomstuff.references.Names;
+
 import java.util.Random;
 
 import net.minecraft.init.Blocks;
@@ -10,8 +12,8 @@ public class CrackedStone extends ModBlock {
 	public CrackedStone() {
 		
 		super();
-		this.setBlockName("crackedStone");
-		this.setBlockTextureName("crackedStone");
+		this.setBlockName(Names.Blocks.CRACKED_STONE);
+		this.setBlockTextureName(Names.Blocks.CRACKED_STONE);
 		
 		this.setHardness(1.5F).setResistance(10.0F).setStepSound(soundTypePiston);
 		
