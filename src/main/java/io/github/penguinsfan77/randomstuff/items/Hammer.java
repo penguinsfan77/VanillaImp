@@ -2,6 +2,7 @@ package io.github.penguinsfan77.randomstuff.items;
 
 import io.github.penguinsfan77.randomstuff.blocks.ModBlocks;
 import io.github.penguinsfan77.randomstuff.references.Names;
+import io.github.penguinsfan77.randomstuff.utilities.LogHelper;
 
 import java.util.Random;
 
@@ -11,6 +12,7 @@ import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
+import net.minecraft.world.World;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent.Action;
 

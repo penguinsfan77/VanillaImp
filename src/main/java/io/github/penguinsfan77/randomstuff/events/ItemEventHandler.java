@@ -4,6 +4,8 @@ import io.github.penguinsfan77.randomstuff.blocks.ModBlocks;
 import io.github.penguinsfan77.randomstuff.items.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent.Action;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
@@ -21,7 +23,7 @@ public class ItemEventHandler {
 			if (block.equals(Blocks.stone)) {
 
 				event.entityPlayer.getEntityWorld().setBlock(event.x, event.y, event.z, ModBlocks.crackedStone);
-				event.entityPlayer.getHeldItem().damageItem(1, event.entityPlayer);
+				event.entityPlayer.getHeldItem().damageItem(1, event.entityLiving);
 				event.useItem = Result.DENY;
 
 			}
