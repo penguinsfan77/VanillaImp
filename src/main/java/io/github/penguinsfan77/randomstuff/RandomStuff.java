@@ -1,12 +1,12 @@
 package io.github.penguinsfan77.randomstuff;
 
 import net.minecraftforge.common.MinecraftForge;
-import io.github.penguinsfan77.randomstuff.blocks.ModBlockRecipes;
-import io.github.penguinsfan77.randomstuff.blocks.ModBlocks;
-import io.github.penguinsfan77.randomstuff.events.ItemEventHandler;
 import io.github.penguinsfan77.randomstuff.handlers.ConfigHandler;
-import io.github.penguinsfan77.randomstuff.items.ModItemRecipes;
-import io.github.penguinsfan77.randomstuff.items.ModItems;
+import io.github.penguinsfan77.randomstuff.handlers.ItemEventHandler;
+import io.github.penguinsfan77.randomstuff.init.ModBlockRecipes;
+import io.github.penguinsfan77.randomstuff.init.ModBlocks;
+import io.github.penguinsfan77.randomstuff.init.ModItemRecipes;
+import io.github.penguinsfan77.randomstuff.init.ModItems;
 import io.github.penguinsfan77.randomstuff.proxy.IProxy;
 import io.github.penguinsfan77.randomstuff.references.Reference;
 import cpw.mods.fml.common.FMLCommonHandler;

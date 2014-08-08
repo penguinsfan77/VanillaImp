@@ -1,6 +1,6 @@
 package io.github.penguinsfan77.randomstuff.creativeTab;
 
-import io.github.penguinsfan77.randomstuff.items.ModItems;
+import io.github.penguinsfan77.randomstuff.init.ModItems;
 import io.github.penguinsfan77.randomstuff.references.Reference;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;

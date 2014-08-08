@@ -1,4 +1,4 @@
-package io.github.penguinsfan77.randomstuff.items;
+package io.github.penguinsfan77.randomstuff.items.weapons;
 
 import io.github.penguinsfan77.randomstuff.creativeTab.ModCreativeTab;
 import io.github.penguinsfan77.randomstuff.references.Reference;
@@ -16,10 +16,6 @@ public class ModItemSword extends ItemSword {
 		super(material);
 		
 		this.setCreativeTab(ModCreativeTab.RANDOM_STUFF_TAB);
-		
-		this.setFull3D();
-		this.setMaxDamage(500);
-		this.setMaxStackSize(1);
 
 	}
 	

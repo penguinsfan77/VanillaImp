@@ -1,5 +1,7 @@
-package io.github.penguinsfan77.randomstuff.blocks;
+package io.github.penguinsfan77.randomstuff.init;
 
+import io.github.penguinsfan77.randomstuff.blocks.CrackedStone;
+import io.github.penguinsfan77.randomstuff.blocks.ModBlock;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ModBlocks {

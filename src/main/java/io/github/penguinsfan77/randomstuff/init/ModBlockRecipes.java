@@ -1,6 +1,5 @@
-package io.github.penguinsfan77.randomstuff.blocks;
+package io.github.penguinsfan77.randomstuff.init;
 
-import io.github.penguinsfan77.randomstuff.items.ModItems;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;

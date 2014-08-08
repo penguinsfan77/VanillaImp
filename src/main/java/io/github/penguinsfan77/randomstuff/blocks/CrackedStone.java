@@ -25,5 +25,12 @@ public class CrackedStone extends ModBlock {
 		return Item.getItemFromBlock(Blocks.cobblestone);
 		
 	}
+	
+	@Override
+	protected boolean canSilkHarvest() {
+		
+		return true;
+		
+	}
 
 }

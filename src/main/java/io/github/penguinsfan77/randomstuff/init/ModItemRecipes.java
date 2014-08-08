@@ -1,4 +1,4 @@
-package io.github.penguinsfan77.randomstuff.items;
+package io.github.penguinsfan77.randomstuff.init;
 
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
