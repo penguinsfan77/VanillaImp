@@ -1,7 +1,7 @@
 package io.github.penguinsfan77.randomstuff.items.weapons;
 
 
-public class Trident extends ModItemSword {
+public class Trident extends ModItemWeapon {
 	
 	public Trident(ToolMaterial mat) {
 		

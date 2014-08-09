@@ -9,9 +9,9 @@ import net.minecraft.item.ItemSword;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ModItemSword extends ItemSword {
+public class ModItemWeapon extends ItemSword {
 	
-	public ModItemSword(ToolMaterial material) {
+	public ModItemWeapon(ToolMaterial material) {
 		
 		super(material);
 		

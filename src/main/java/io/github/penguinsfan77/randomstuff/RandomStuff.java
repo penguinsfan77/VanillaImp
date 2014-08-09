@@ -9,6 +9,7 @@ import io.github.penguinsfan77.randomstuff.init.ModItemRecipes;
 import io.github.penguinsfan77.randomstuff.init.ModItems;
 import io.github.penguinsfan77.randomstuff.proxy.IProxy;
 import io.github.penguinsfan77.randomstuff.references.Reference;
+import io.github.penguinsfan77.randomstuff.utilities.LogHelper;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
@@ -35,11 +36,14 @@ public class RandomStuff {
     public void preInit(FMLPreInitializationEvent event) {
 		
 		//Setup the config
+		LogHelper.info("Setting up the Config!");
         ConfigHandler.init(event.getSuggestedConfigurationFile());
         FMLCommonHandler.instance().bus().register(new ConfigHandler());
         
         //Register items and blocks
+        LogHelper.info("Registering Items!");
         ModItems.init();
+        LogHelper.info("Registering Blocks!");
         ModBlocks.init();
         
     }
@@ -53,7 +57,7 @@ public class RandomStuff {
     	ModBlockRecipes.init();
     	
     	//Register event handlers
-    	MinecraftForge.EVENT_BUS.register(new ItemEventHandler());
+    	//FMLCommonHandler.instance().bus().register(new ItemEventHandler());
         
     }
 
