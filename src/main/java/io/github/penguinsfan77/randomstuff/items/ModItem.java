@@ -3,6 +3,7 @@ package io.github.penguinsfan77.randomstuff.items;
 import io.github.penguinsfan77.randomstuff.creativeTab.ModCreativeTab;
 import io.github.penguinsfan77.randomstuff.references.Reference;
 import io.github.penguinsfan77.randomstuff.references.Textures;
+import io.github.penguinsfan77.randomstuff.utilities.LogHelper;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.renderer.texture.IIconRegister;

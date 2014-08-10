@@ -1,12 +1,17 @@
 package io.github.penguinsfan77.randomstuff;
 
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.oredict.RecipeSorter;
+import net.minecraftforge.oredict.RecipeSorter.Category;
+import io.github.penguinsfan77.randomstuff.crafting.ColoredItemsRecipe;
+import io.github.penguinsfan77.randomstuff.crafting.ReColoredItemsRecipe;
 import io.github.penguinsfan77.randomstuff.handlers.ConfigHandler;
 import io.github.penguinsfan77.randomstuff.handlers.ItemEventHandler;
 import io.github.penguinsfan77.randomstuff.init.ModBlockRecipes;
 import io.github.penguinsfan77.randomstuff.init.ModBlocks;
 import io.github.penguinsfan77.randomstuff.init.ModItemRecipes;
 import io.github.penguinsfan77.randomstuff.init.ModItems;
+import io.github.penguinsfan77.randomstuff.init.ModOreDictionary;
 import io.github.penguinsfan77.randomstuff.proxy.IProxy;
 import io.github.penguinsfan77.randomstuff.references.Reference;
 import io.github.penguinsfan77.randomstuff.utilities.LogHelper;
@@ -53,8 +58,11 @@ public class RandomStuff {
     public void init(FMLInitializationEvent event) {
     	
         //Register recipes
+    	RecipeSorter.register("randomstuff:colored", ColoredItemsRecipe.class, Category.SHAPED, "before:forge:shapedore");
+    	RecipeSorter.register("randomstuff:recolored", ReColoredItemsRecipe.class, Category.SHAPELESS, "before:forge:shapedore after:randomstuff:colored");
     	ModItemRecipes.init();
     	ModBlockRecipes.init();
+    	ModOreDictionary.init();
     	
     	//Register event handlers
     	//FMLCommonHandler.instance().bus().register(new ItemEventHandler());
