@@ -3,6 +3,7 @@ package io.github.penguinsfan77.randomstuff.items.tools;
 import io.github.penguinsfan77.randomstuff.init.ModBlocks;
 import io.github.penguinsfan77.randomstuff.references.Names;
 import io.github.penguinsfan77.randomstuff.utilities.LogHelper;
+import io.github.penguinsfan77.randomstuff.utilities.NBTHelper;
 
 import java.util.Random;
 import java.util.Set;
@@ -20,14 +21,13 @@ import net.minecraft.world.World;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent.Action;
 
-public class Hammer extends ModItemTool {
+public class Hammer extends ColoredTool {
 	
 	private static final Set effectiveOn = Sets.newHashSet(new Block[] {Blocks.stone, Blocks.stonebrick});
 	
-	public Hammer() {
+	public Hammer(ToolMaterial material) {
 		
-		super(2.0F, ToolMaterial.STONE, effectiveOn);
-		this.setUnlocalizedName(Names.Tools.HAMMER);
+		super(2.0F, material, effectiveOn, "hammer");
 		
 		this.efficiencyOnProperMaterial = 999F;
 		
@@ -54,15 +54,25 @@ public class Hammer extends ModItemTool {
 	}
 	
 	@Override
-	public boolean onBlockDestroyed(ItemStack item, World world, Block block, int x, int y, int z, EntityLivingBase player) {
-
-		item.damageItem(1, player);
+	public boolean onItemUse(ItemStack item, EntityPlayer player, World world, int x, int y, int z, int face, float float1, float float2, float float3) {
 		
-		if (block.equals(Blocks.stone)) {
+		boolean sucsess = false;
+		
+		if (world.getBlock(x, y, z).equals(Blocks.stone)) {
 			world.setBlock(x, y, z, ModBlocks.crackedStone);
+			sucsess = true;
+		} else if (world.getBlock(x, y, z).equals(Blocks.stonebrick)) {
+			world.setBlock(x, y, z, Blocks.stonebrick, 2, 3);
+			sucsess = true;
 		}
 		
-		return true;
+		if (sucsess) {
+			item.damageItem(1, player);
+			player.playSound(Block.soundTypeStone.getBreakSound(), 1.0F, world.rand.nextFloat() * 0.1F + 0.9F);
+			return true;
+		}
+		
+		return false;
 		
 	}
 	

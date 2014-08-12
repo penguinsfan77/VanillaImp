@@ -41,14 +41,11 @@ public class RandomStuff {
     public void preInit(FMLPreInitializationEvent event) {
 		
 		//Setup the config
-		LogHelper.info("Setting up the Config!");
         ConfigHandler.init(event.getSuggestedConfigurationFile());
         FMLCommonHandler.instance().bus().register(new ConfigHandler());
         
         //Register items and blocks
-        LogHelper.info("Registering Items!");
         ModItems.init();
-        LogHelper.info("Registering Blocks!");
         ModBlocks.init();
         
     }
@@ -65,7 +62,7 @@ public class RandomStuff {
     	ModOreDictionary.init();
     	
     	//Register event handlers
-    	//FMLCommonHandler.instance().bus().register(new ItemEventHandler());
+    	FMLCommonHandler.instance().bus().register(new ItemEventHandler());
         
     }
 
@@ -73,7 +70,7 @@ public class RandomStuff {
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event) {
     	
-        
+        LogHelper.info(Reference.MOD_NAME + " has been initialized!");
         
     }
 

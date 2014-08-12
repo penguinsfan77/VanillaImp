@@ -2,11 +2,45 @@
 ## Items ##
 ###########
 item.randomstuff:stone_trident.name=Stone Trident
-item.randomstuff:gold_trident.name=Gold Trident
+item.randomstuff:gold_trident.name=Golden Trident
 item.randomstuff:iron_trident.name=Iron Trident
 item.randomstuff:emerald_trident.name=Diamond Trident
 
-item.randomstuff:hammer.name=Hammer
+item.randomstuff:colored_wood_sword.name=Wooden Sword
+item.randomstuff:colored_gold_sword.name=Golden Sword
+item.randomstuff:colored_stone_sword.name=Stone Sword
+item.randomstuff:colored_iron_sword.name=Iron Sword
+item.randomstuff:colored_emerald_sword.name=Diamond Sword
+
+item.randomstuff:colored_wood_pickaxe.name=Wooden Pickaxe
+item.randomstuff:colored_gold_pickaxe.name=Golden Pickaxe
+item.randomstuff:colored_stone_pickaxe.name=Stone Pickaxe
+item.randomstuff:colored_iron_pickaxe.name=Iron Pickaxe
+item.randomstuff:colored_emerald_pickaxe.name=Diamond Pickaxe
+
+item.randomstuff:colored_wood_shovel.name=Wooden Shovel
+item.randomstuff:colored_gold_shovel.name=Golden Shovel
+item.randomstuff:colored_stone_shovel.name=Stone Shovel
+item.randomstuff:colored_iron_shovel.name=Iron Shovel
+item.randomstuff:colored_emerald_shovel.name=Diamond Shovel
+
+item.randomstuff:colored_wood_axe.name=Wooden Axe
+item.randomstuff:colored_gold_axe.name=Golden Axe
+item.randomstuff:colored_stone_axe.name=Stone Axe
+item.randomstuff:colored_iron_axe.name=Iron Axe
+item.randomstuff:colored_emerald_axe.name=Diamond Axe
+
+item.randomstuff:colored_wood_hoe.name=Wooden Hoe
+item.randomstuff:colored_gold_hoe.name=Golden Hoe
+item.randomstuff:colored_stone_hoe.name=Stone Hoe
+item.randomstuff:colored_iron_hoe.name=Iron Hoe
+item.randomstuff:colored_emerald_hoe.name=Diamond Hoe
+
+item.randomstuff:colored_wood_hammer.name=Wooden Hammer
+item.randomstuff:colored_gold_hammer.name=Golden Hammer
+item.randomstuff:colored_stone_hammer.name=Stone Hammer
+item.randomstuff:colored_iron_hammer.name=Iron Hammer
+item.randomstuff:colored_emerald_hammer.name=Diamond Hammer
 
 item.randomstuff:colored_stick.white.name=White Stick
 item.randomstuff:colored_stick.orange.name=Orange Stick
@@ -34,3 +68,24 @@ tile.randomstuff:cracked_stone.name=Cracked Stone
 ## Creative Tab ##
 ##################
 itemGroup.randomstuff=Random Stuff
+
+####################
+## Item Tool Tips ##
+####################
+tooltip.name.handleColor=Handle Color
+tooltip.value.color.white=White
+tooltip.value.color.orange=Orange
+tooltip.value.color.magenta=Magenta
+tooltip.value.color.light_blue=Light Blue
+tooltip.value.color.yellow=Yellow
+tooltip.value.color.lime=Lime
+tooltip.value.color.pink=Pink
+tooltip.value.color.gray=Gray
+tooltip.value.color.light_gray=Light Gray
+tooltip.value.color.cyan=Cyan
+tooltip.value.color.purple=Purple
+tooltip.value.color.blue=Blue
+tooltip.value.color.brown=Brown
+tooltip.value.color.green=Green
+tooltip.value.color.red=Red
+tooltip.value.color.black=Black

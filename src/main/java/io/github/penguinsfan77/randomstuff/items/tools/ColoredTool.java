@@ -4,18 +4,24 @@ import io.github.penguinsfan77.randomstuff.references.Colors;
 import io.github.penguinsfan77.randomstuff.references.NBTTags;
 import io.github.penguinsfan77.randomstuff.references.Names;
 import io.github.penguinsfan77.randomstuff.references.Textures;
+import io.github.penguinsfan77.randomstuff.references.ToolTips;
 import io.github.penguinsfan77.randomstuff.utilities.LogHelper;
 import io.github.penguinsfan77.randomstuff.utilities.NBTHelper;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Set;
+
+import com.google.common.collect.Multimap;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.IIcon;
+import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 
 public class ColoredTool extends ModItemTool {
@@ -53,7 +59,8 @@ public class ColoredTool extends ModItemTool {
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IIconRegister iconRegister) {
 
-		handles.put("wood", iconRegister.registerIcon(Textures.PREFIX + "wood_" + toolName + "_handle"));
+		handles.put("colored", iconRegister.registerIcon(Textures.PREFIX + "colored_" + toolName + "_handle"));
+		handles.put("plain", iconRegister.registerIcon(Textures.PREFIX + toolName + "_handle"));
 		base = iconRegister.registerIcon(Textures.PREFIX + getToolMaterialName().toLowerCase() + "_" + toolName);
 		
 	}
@@ -62,7 +69,11 @@ public class ColoredTool extends ModItemTool {
 	public IIcon getIcon(ItemStack stack, int pass) {
 
 		if (pass == 0) {
-			return (IIcon) handles.get("wood");
+			if (NBTHelper.hasTag(stack, NBTTags.HANDLE)) {
+				return (IIcon) handles.get(NBTHelper.getString(stack, NBTTags.HANDLE));
+			} else {
+				return (IIcon) handles.get("plain");
+			}
 		} else if (pass == 1) {
 			return base;
 		} else {
@@ -76,7 +87,7 @@ public class ColoredTool extends ModItemTool {
 	public int getColorFromItemStack(ItemStack item, int renderPass) {
 		
 		if (renderPass == 0 && NBTHelper.hasTag(item, NBTTags.COLOR)) {
-			return Integer.parseInt(Colors.fromNumber[NBTHelper.getInt(item, NBTTags.COLOR)], 16);
+			return Integer.parseInt(NBTHelper.getString(item, NBTTags.COLOR), 16);
 		}
 
 		return super.getColorFromItemStack(item, renderPass);
@@ -84,11 +95,21 @@ public class ColoredTool extends ModItemTool {
 	}
 	
 	@Override
-	public ItemStack onItemRightClick(ItemStack p_77659_1_, World p_77659_2_, EntityPlayer p_77659_3_) {
+	public void onCreated(ItemStack item, World world, EntityPlayer player) {
 
-		LogHelper.info(NBTHelper.hasTag(p_77659_1_, NBTTags.COLOR));
-		LogHelper.info(NBTHelper.getInt(p_77659_1_, NBTTags.COLOR));
-		return super.onItemRightClick(p_77659_1_, p_77659_2_, p_77659_3_);
+		if (!NBTHelper.hasTag(item, NBTTags.HANDLE)) {
+			NBTHelper.setString(item, NBTTags.HANDLE, "plain");
+		}
+		
+	}
+	
+	@Override
+	public void addInformation(ItemStack item, EntityPlayer player, List list, boolean bool) {
+
+		if (NBTHelper.hasTag(item, NBTTags.HANDLE) && NBTHelper.getString(item, NBTTags.HANDLE).equalsIgnoreCase("colored")) {
+			list.add(StatCollector.translateToLocal(ToolTips.COLOR) + ": " + StatCollector.translateToLocal((String) ToolTips.Values.COLORS.get(NBTHelper.getString(item, NBTTags.COLOR))));
+		}
+		super.addInformation(item, player, list, bool);
 		
 	}
 

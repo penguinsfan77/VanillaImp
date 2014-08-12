@@ -1,5 +1,6 @@
 package io.github.penguinsfan77.randomstuff.crafting;
 
+import io.github.penguinsfan77.randomstuff.references.Colors;
 import io.github.penguinsfan77.randomstuff.references.NBTTags;
 import io.github.penguinsfan77.randomstuff.utilities.NBTHelper;
 
@@ -12,6 +13,8 @@ import net.minecraft.init.Items;
 import net.minecraft.inventory.InventoryCrafting;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemSword;
+import net.minecraft.item.ItemTool;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.world.World;
 
@@ -108,12 +111,22 @@ public class ReColoredItemsRecipe implements IRecipe {
     public ItemStack getCraftingResult(InventoryCrafting grid) {
 
     	ItemStack itemstack = this.recipeOutput.copy();
+    	ItemStack dye = null;
+    	ItemStack tool = null;
 
     	for (int i = 0; i < grid.getSizeInventory(); ++i) {
     		ItemStack item = grid.getStackInSlot(i);
     		if (item != null && item.getItem().equals(Items.dye)) {
-    			NBTHelper.setInteger(itemstack, NBTTags.COLOR, item.getItemDamage());
+    			dye = item;
+    		} else if (item != null && (item.getItem() instanceof ItemTool || item.getItem() instanceof ItemSword)) {
+    			tool = item;
     		}
+    	}
+
+    	if (dye != null && tool != null) {
+    		itemstack.setItemDamage(tool.getItemDamage());
+    		NBTHelper.setString(itemstack, NBTTags.COLOR, Colors.fromNumber[dye.getItemDamage()]);
+    		NBTHelper.setString(itemstack, NBTTags.HANDLE, "colored");
     	}
 
     	return itemstack;

@@ -1,6 +1,7 @@
 package io.github.penguinsfan77.randomstuff.crafting;
 
 import io.github.penguinsfan77.randomstuff.init.ModItems;
+import io.github.penguinsfan77.randomstuff.references.Colors;
 import io.github.penguinsfan77.randomstuff.references.NBTTags;
 import io.github.penguinsfan77.randomstuff.utilities.NBTHelper;
 
@@ -197,7 +198,8 @@ public class ColoredItemsRecipe implements IRecipe {
 		for (int i = 0; i < grid.getSizeInventory(); i++) {
 			ItemStack item = grid.getStackInSlot(i);
 			if (item != null && item.getItem().equals(ModItems.colored_stick)) {
-				NBTHelper.setInteger(itemstack, NBTTags.COLOR, item.getItemDamage());
+				NBTHelper.setString(itemstack, NBTTags.COLOR, Colors.fromNumber[item.getItemDamage()]);
+				NBTHelper.setString(itemstack, NBTTags.HANDLE, "colored");
 				return itemstack;
 			}
 		}

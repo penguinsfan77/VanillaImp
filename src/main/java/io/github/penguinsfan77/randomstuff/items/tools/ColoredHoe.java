@@ -2,6 +2,8 @@ package io.github.penguinsfan77.randomstuff.items.tools;
 
 import java.util.Set;
 
+import com.google.common.collect.HashMultimap;
+import com.google.common.collect.Multimap;
 import com.google.common.collect.Sets;
 
 import net.minecraft.block.Block;
@@ -66,6 +68,12 @@ public class ColoredHoe extends ColoredTool {
                 return false;
             }
         }
+    }
+	
+	@Override
+    public Multimap getItemAttributeModifiers()
+    {
+        return HashMultimap.create();
     }
 
 }
