@@ -59,10 +59,8 @@ public class Sticks extends ModItem {
 	public IIcon getIcon(ItemStack item, int pass) {
 
 		if (item.getItemDamage() < 16) {
-			LogHelper.info("coloredstick");
 			return (IIcon) icons.get(0);
 		} else {
-			LogHelper.info("metalstick");
 			return (IIcon) icons.get(item.getItemDamage());
 		}
 		
