@@ -10,7 +10,10 @@ public class Names {
 	
 	public static final class Items {
 		
-		public static final String COLORED_STICK = "colored_stick";
+		public static final String STICK = "stick";
+		public static final class StickTypes {
+			public static final String[] fromDamage = {"black", "red", "green", "brown", "blue", "purple", "cyan", "light_gray", "gray", "pink", "lime", "yellow", "light_blue", "magenta", "orange", "white", "stone", "gold", "iron", "emerald"};
+		}
 		
 	}
 	

@@ -56,7 +56,11 @@ public class ColoredWeapon extends ModItemWeapon {
 	public void registerIcons(IIconRegister iconRegister) {
 
 		handles.put("colored", iconRegister.registerIcon(Textures.PREFIX + "colored_" + weaponName + "_handle"));
-		handles.put("plain", iconRegister.registerIcon(Textures.PREFIX + weaponName + "_handle"));
+		handles.put("wood", iconRegister.registerIcon(Textures.PREFIX + weaponName + "_handle"));
+		handles.put("stone", iconRegister.registerIcon(Textures.PREFIX + "stone_" + weaponName + "_handle"));
+		handles.put("iron", iconRegister.registerIcon(Textures.PREFIX + "iron_" + weaponName + "_handle"));
+		handles.put("gold", iconRegister.registerIcon(Textures.PREFIX + "gold_" + weaponName + "_handle"));
+		handles.put("diamond", iconRegister.registerIcon(Textures.PREFIX + "emerald_" + weaponName + "_handle"));
 		base = iconRegister.registerIcon(Textures.PREFIX + getToolMaterialName().toLowerCase() + "_" + weaponName);
 		
 	}
@@ -68,7 +72,7 @@ public class ColoredWeapon extends ModItemWeapon {
 			if (NBTHelper.hasTag(stack, NBTTags.HANDLE)) {
 				return (IIcon) handles.get(NBTHelper.getString(stack, NBTTags.HANDLE));
 			} else {
-				return (IIcon) handles.get("plain");
+				return (IIcon) handles.get(NBTTags.Handles.WOOD);
 			}
 		} else if (pass == 1) {
 			return base;
@@ -87,15 +91,6 @@ public class ColoredWeapon extends ModItemWeapon {
 		}
 
 		return super.getColorFromItemStack(item, renderPass);
-		
-	}
-	
-	@Override
-	public void onCreated(ItemStack item, World world, EntityPlayer player) {
-
-		if (!NBTHelper.hasTag(item, NBTTags.HANDLE)) {
-			NBTHelper.setString(item, NBTTags.HANDLE, "plain");
-		}
 		
 	}
 	

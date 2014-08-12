@@ -49,7 +49,7 @@ public class ModItems {
 	public static final ModItemTool stone_hammer = new Hammer(ToolMaterial.STONE);
 	public static final ModItemTool wood_hammer = new Hammer(ToolMaterial.WOOD);
 	
-	public static final ModItem colored_stick = new ColoredStick();
+	public static final ModItem colored_stick = new Sticks();
 	
 	public static void init() {
 		
