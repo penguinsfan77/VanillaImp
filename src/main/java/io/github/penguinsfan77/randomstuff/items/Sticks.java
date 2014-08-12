@@ -45,8 +45,7 @@ public class Sticks extends ModItem {
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IIconRegister iconRegister) {
-
-		LogHelper.info("Icons registered");
+		
 		icons.put(0, iconRegister.registerIcon(Textures.PREFIX + "colored_stick"));
 		icons.put(16, iconRegister.registerIcon(Textures.PREFIX + "stone_stick"));
 		icons.put(17, iconRegister.registerIcon(Textures.PREFIX + "gold_stick"));
