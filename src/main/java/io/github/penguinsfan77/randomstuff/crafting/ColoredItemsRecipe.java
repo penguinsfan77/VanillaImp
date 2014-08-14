@@ -194,17 +194,71 @@ public class ColoredItemsRecipe implements IRecipe {
 	public ItemStack getCraftingResult(InventoryCrafting grid) {
 		
 		ItemStack itemstack = this.getRecipeOutput().copy();
-
+		ItemStack stick1 = null;
+		ItemStack stick2 = null;
+		ItemStack head = null;
+		
 		for (int i = 0; i < grid.getSizeInventory(); i++) {
 			ItemStack item = grid.getStackInSlot(i);
-			if (item != null && item.getItem().equals(ModItems.colored_stick)) {
-				NBTHelper.setString(itemstack, NBTTags.COLOR, Colors.fromNumber[item.getItemDamage()]);
-				NBTHelper.setString(itemstack, NBTTags.HANDLE, "colored");
-				return itemstack;
+			if (item != null && item.getItem().equals(ModItems.stick)) {
+				if (stick1 == null) {
+					stick1 = item;
+				} else {
+					stick2 = item;
+				}
+			} else if (item != null && item.getItem().equals(ModItems.trident_head)) {
+				head = item;
 			}
 		}
 		
-		return itemstack;
+		if (stick2 != null) {
+			if (stick1.getItemDamage() == stick2.getItemDamage()) {
+				if (stick1.getItemDamage() < 16) {
+					NBTHelper.setString(itemstack, NBTTags.HANDLE_COLOR, Colors.fromNumber[stick1.getItemDamage()]);
+					NBTHelper.setString(itemstack, NBTTags.HANDLE, NBTTags.Values.COLORED);
+				} else if (stick1.getItemDamage() == 16) {
+					NBTHelper.setString(itemstack, NBTTags.HANDLE, NBTTags.Values.STONE);
+				} else if (stick1.getItemDamage() == 17) {
+					NBTHelper.setString(itemstack, NBTTags.HANDLE, NBTTags.Values.GOLD);
+				} else if (stick1.getItemDamage() == 18) {
+					NBTHelper.setString(itemstack, NBTTags.HANDLE, NBTTags.Values.IRON);
+				} else if (stick1.getItemDamage() == 19) {
+					NBTHelper.setString(itemstack, NBTTags.HANDLE, NBTTags.Values.DIAMOND);
+				}
+				return itemstack;
+			} else {
+				return null;
+			}
+		} else {
+			if (stick1.getItemDamage() < 16) {
+				NBTHelper.setString(itemstack, NBTTags.HANDLE_COLOR, Colors.fromNumber[stick1.getItemDamage()]);
+				NBTHelper.setString(itemstack, NBTTags.HANDLE, NBTTags.Values.COLORED);
+			} else if (stick1.getItemDamage() == 16) {
+				NBTHelper.setString(itemstack, NBTTags.HANDLE, NBTTags.Values.STONE);
+			} else if (stick1.getItemDamage() == 17) {
+				NBTHelper.setString(itemstack, NBTTags.HANDLE, NBTTags.Values.GOLD);
+			} else if (stick1.getItemDamage() == 18) {
+				NBTHelper.setString(itemstack, NBTTags.HANDLE, NBTTags.Values.IRON);
+			} else if (stick1.getItemDamage() == 19) {
+				NBTHelper.setString(itemstack, NBTTags.HANDLE, NBTTags.Values.DIAMOND);
+			}
+			if (head != null) {
+				//TODO: change durability based of head
+				if (head.getItemDamage() < 16) {
+					NBTHelper.setString(itemstack, NBTTags.HANDLE_COLOR, Colors.fromNumber[head.getItemDamage()]);
+					NBTHelper.setString(itemstack, NBTTags.HANDLE, NBTTags.Values.COLORED);
+				} else if (head.getItemDamage() == 16) {
+					NBTHelper.setString(itemstack, NBTTags.HANDLE, NBTTags.Values.STONE);
+				} else if (head.getItemDamage() == 17) {
+					NBTHelper.setString(itemstack, NBTTags.HANDLE, NBTTags.Values.GOLD);
+				} else if (head.getItemDamage() == 18) {
+					NBTHelper.setString(itemstack, NBTTags.HANDLE, NBTTags.Values.IRON);
+				} else if (head.getItemDamage() == 19) {
+					NBTHelper.setString(itemstack, NBTTags.HANDLE, NBTTags.Values.DIAMOND);
+				}
+			}
+			return itemstack;
+		}
 	}
 
 	/**

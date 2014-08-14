@@ -1,8 +1,5 @@
 package io.github.penguinsfan77.randomstuff;
 
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.oredict.RecipeSorter;
-import net.minecraftforge.oredict.RecipeSorter.Category;
 import io.github.penguinsfan77.randomstuff.crafting.ColoredItemsRecipe;
 import io.github.penguinsfan77.randomstuff.crafting.ReColoredItemsRecipe;
 import io.github.penguinsfan77.randomstuff.handlers.ConfigHandler;
@@ -15,6 +12,9 @@ import io.github.penguinsfan77.randomstuff.init.ModOreDictionary;
 import io.github.penguinsfan77.randomstuff.proxy.IProxy;
 import io.github.penguinsfan77.randomstuff.references.Reference;
 import io.github.penguinsfan77.randomstuff.utilities.LogHelper;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.oredict.RecipeSorter;
+import net.minecraftforge.oredict.RecipeSorter.Category;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;

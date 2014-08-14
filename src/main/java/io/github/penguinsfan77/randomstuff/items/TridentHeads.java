@@ -1,10 +1,5 @@
 package io.github.penguinsfan77.randomstuff.items;
 
-import io.github.penguinsfan77.randomstuff.references.Colors;
-import io.github.penguinsfan77.randomstuff.references.Names;
-import io.github.penguinsfan77.randomstuff.references.Textures;
-import io.github.penguinsfan77.randomstuff.utilities.LogHelper;
-
 import java.util.HashMap;
 import java.util.List;
 
@@ -15,16 +10,20 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import io.github.penguinsfan77.randomstuff.references.Colors;
+import io.github.penguinsfan77.randomstuff.references.Names;
+import io.github.penguinsfan77.randomstuff.references.Textures;
 
-//TODO: fix textures
-public class Sticks extends ModItem {
+//TODO: make textures
+//TODO: add tool material based of head
+public class TridentHeads extends ModItem {
 	
 	private HashMap icons = new HashMap<Integer, IIcon>();
 	
-	public Sticks() {
-		
+	public TridentHeads() {
+
 		super();
-		this.setUnlocalizedName(Names.Items.STICK);
+		this.setUnlocalizedName(Names.Items.TRIDENT_HEAD);
 		
 		this.setMaxStackSize(64);
 		this.setHasSubtypes(true);
@@ -47,11 +46,11 @@ public class Sticks extends ModItem {
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IIconRegister iconRegister) {
 		
-		icons.put(0, iconRegister.registerIcon(Textures.PREFIX + "colored_stick"));
-		icons.put(16, iconRegister.registerIcon(Textures.PREFIX + "stone_stick"));
-		icons.put(17, iconRegister.registerIcon(Textures.PREFIX + "gold_stick"));
-		icons.put(18, iconRegister.registerIcon(Textures.PREFIX + "iron_stick"));
-		icons.put(19, iconRegister.registerIcon(Textures.PREFIX + "emerald_stick"));
+		icons.put(0, iconRegister.registerIcon(Textures.PREFIX + "colored_trident_head"));
+		icons.put(16, iconRegister.registerIcon(Textures.PREFIX + "stone_trident_head"));
+		icons.put(17, iconRegister.registerIcon(Textures.PREFIX + "gold_trident_head"));
+		icons.put(18, iconRegister.registerIcon(Textures.PREFIX + "iron_trident_head"));
+		icons.put(19, iconRegister.registerIcon(Textures.PREFIX + "emerald_trident_head"));
 		
 	}
 	
@@ -69,14 +68,14 @@ public class Sticks extends ModItem {
 	@Override
     public String getUnlocalizedName() {
 		
-        return String.format("item.%s%s", Textures.PREFIX, Names.Items.STICK);
+        return String.format("item.%s%s", Textures.PREFIX, Names.Items.TRIDENT_HEAD);
         
     }
 
     @Override
     public String getUnlocalizedName(ItemStack itemStack) {
     	
-        return String.format("item.%s%s.%s", Textures.PREFIX, Names.Items.STICK, Names.Items.Types.fromDamage[itemStack.getItemDamage()]);
+        return String.format("item.%s%s.%s", Textures.PREFIX, Names.Items.TRIDENT_HEAD, Names.Items.Types.fromDamage[itemStack.getItemDamage()]);
    
     }
     

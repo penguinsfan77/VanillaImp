@@ -49,7 +49,8 @@ public class ModItems {
 	public static final ModItemTool stone_hammer = new Hammer(ToolMaterial.STONE);
 	public static final ModItemTool wood_hammer = new Hammer(ToolMaterial.WOOD);
 	
-	public static final ModItem colored_stick = new Sticks();
+	public static final ModItem stick = new Sticks();
+	public static final ModItem trident_head = new TridentHeads();
 	
 	public static void init() {
 		
@@ -90,7 +91,8 @@ public class ModItems {
 		GameRegistry.registerItem(stone_hammer, "stone_hammer");
 		GameRegistry.registerItem(wood_hammer, "wood_hammer");
 		
-		GameRegistry.registerItem(colored_stick, "colored_stick");
+		GameRegistry.registerItem(stick, "stick");
+		GameRegistry.registerItem(trident_head, "trident_head");
 	
 	}
 

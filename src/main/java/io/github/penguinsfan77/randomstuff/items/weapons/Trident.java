@@ -53,6 +53,18 @@ public class Trident extends ColoredWeapon {
 	}
 	
 	@Override
+	public int getColorFromItemStack(ItemStack item, int renderPass) {
+		
+		if (renderPass == 2 && NBTHelper.hasTag(item, NBTTags.HEAD)) {
+			if (NBTHelper.getString(item, NBTTags.HEAD).equalsIgnoreCase("colored")) {
+				return Integer.parseInt(NBTHelper.getString(item, NBTTags.HEAD_COLOR), 16);
+			}
+		}
+		return super.getColorFromItemStack(item, renderPass);
+		
+	}
+	
+	@Override
 	public int getRenderPasses(int metadata) {
 
 		return 3;

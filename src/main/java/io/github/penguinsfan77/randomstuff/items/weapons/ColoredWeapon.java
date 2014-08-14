@@ -72,7 +72,7 @@ public class ColoredWeapon extends ModItemWeapon {
 			if (NBTHelper.hasTag(stack, NBTTags.HANDLE)) {
 				return (IIcon) handles.get(NBTHelper.getString(stack, NBTTags.HANDLE));
 			} else {
-				return (IIcon) handles.get(NBTTags.Handles.WOOD);
+				return (IIcon) handles.get(NBTTags.Values.WOOD);
 			}
 		} else if (pass == 1) {
 			return base;
@@ -86,8 +86,8 @@ public class ColoredWeapon extends ModItemWeapon {
 	@SideOnly(Side.CLIENT)
 	public int getColorFromItemStack(ItemStack item, int renderPass) {
 		
-		if (renderPass == 0 && NBTHelper.hasTag(item, NBTTags.COLOR)) {
-			return Integer.parseInt(NBTHelper.getString(item, NBTTags.COLOR), 16);
+		if (renderPass == 0 && NBTHelper.hasTag(item, NBTTags.HANDLE_COLOR)) {
+			return Integer.parseInt(NBTHelper.getString(item, NBTTags.HANDLE_COLOR), 16);
 		}
 
 		return super.getColorFromItemStack(item, renderPass);
@@ -97,8 +97,8 @@ public class ColoredWeapon extends ModItemWeapon {
 	@Override
 	public void addInformation(ItemStack item, EntityPlayer player, List list, boolean bool) {
 
-		if (NBTHelper.hasTag(item, NBTTags.HANDLE) && NBTHelper.getString(item, NBTTags.HANDLE).equalsIgnoreCase("colored")) {
-			list.add(StatCollector.translateToLocal(ToolTips.COLOR) + ": " + StatCollector.translateToLocal((String) ToolTips.Values.COLORS.get(NBTHelper.getString(item, NBTTags.COLOR))));
+		if (NBTHelper.hasTag(item, NBTTags.HANDLE) && NBTHelper.getString(item, NBTTags.HANDLE).equalsIgnoreCase(NBTTags.Values.COLORED)) {
+			list.add(StatCollector.translateToLocal(ToolTips.COLOR) + ": " + StatCollector.translateToLocal((String) ToolTips.Values.COLORS.get(NBTHelper.getString(item, NBTTags.HANDLE_COLOR))));
 		}
 		super.addInformation(item, player, list, bool);
 		

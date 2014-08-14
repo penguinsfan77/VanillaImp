@@ -2,11 +2,12 @@ package io.github.penguinsfan77.randomstuff.references;
 
 public class NBTTags {
 	
-	public static final String COLOR = "handle_color";
+	public static final String HANDLE_COLOR = "handle_color";
+	public static final String HEAD_COLOR = "head_color";
 	public static final String HANDLE = "handle_type";
 	public static final String HEAD = "head_type";
 	
-	public static final class Handles {
+	public static final class Values {
 		
 		public static final String WOOD = "wood";
 		public static final String STONE = "stone";
