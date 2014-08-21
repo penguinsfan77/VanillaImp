@@ -12,10 +12,13 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemTool;
 
 public class ModItemTool extends ItemTool {
+	
+	protected ToolMaterial material;
 
 	protected ModItemTool(float damage, ToolMaterial material, Set effectiveOn) {
 		
 		super(damage, material, effectiveOn);
+		this.material = material;
 		
 		this.setCreativeTab(ModCreativeTab.RANDOM_STUFF_TAB);
 

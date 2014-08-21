@@ -123,6 +123,7 @@ public class ReColoredItemsRecipe implements IRecipe {
     		}
     	}
 
+    	//TODO: fix for new recoloring
     	if (dye != null && tool != null) {
     		itemstack.setItemDamage(tool.getItemDamage());
     		if (NBTHelper.hasTag(tool, NBTTags.HANDLE) && (NBTHelper.getString(tool, NBTTags.HANDLE).equalsIgnoreCase(NBTTags.Values.COLORED) || NBTHelper.getString(tool, NBTTags.HANDLE).equalsIgnoreCase(NBTTags.Values.WOOD))) {
@@ -131,7 +132,6 @@ public class ReColoredItemsRecipe implements IRecipe {
     		}
     		if (NBTHelper.hasTag(tool, NBTTags.HEAD) && (NBTHelper.getString(tool, NBTTags.HEAD).equalsIgnoreCase(NBTTags.Values.COLORED) || NBTHelper.getString(tool, NBTTags.HEAD).equalsIgnoreCase(NBTTags.Values.WOOD))) {
     			NBTHelper.setString(itemstack, NBTTags.HEAD_COLOR, Colors.fromNumber[dye.getItemDamage()]);
-        		NBTHelper.setString(itemstack, NBTTags.HEAD, NBTTags.Values.COLORED);
     		}
     	}
 

@@ -9,14 +9,47 @@ import io.github.penguinsfan77.randomstuff.items.weapons.*;
 import io.github.penguinsfan77.randomstuff.references.Reference;
 import cpw.mods.fml.common.registry.GameRegistry;
 
+//TODO: add colored varieties of all tools
 @GameRegistry.ObjectHolder(Reference.MOD_ID)
 public class ModItems {
 	
 	//Create items
-	public static final ModItemWeapon stone_trident = new Trident(ToolMaterial.STONE);
-	public static final ModItemWeapon gold_trident = new Trident(ToolMaterial.GOLD);
-	public static final ModItemWeapon iron_trident = new Trident(ToolMaterial.IRON);
-	public static final ModItemWeapon diamond_trident = new Trident(ToolMaterial.EMERALD);
+	public static final ModItemWeapon wood_wood_trident = new Trident(ToolMaterial.WOOD, ToolMaterial.WOOD);
+	public static final ModItemWeapon wood_stone_trident = new Trident(ToolMaterial.STONE, ToolMaterial.WOOD);
+	public static final ModItemWeapon wood_gold_trident = new Trident(ToolMaterial.GOLD, ToolMaterial.WOOD);
+	public static final ModItemWeapon wood_iron_trident = new Trident(ToolMaterial.IRON, ToolMaterial.WOOD);
+	public static final ModItemWeapon wood_diamond_trident = new Trident(ToolMaterial.EMERALD, ToolMaterial.WOOD);
+	public static final ModItemWeapon wood_colored_trident = new Trident(ModItemMaterials.COLORED, ToolMaterial.WOOD);
+	public static final ModItemWeapon stone_wood_trident = new Trident(ToolMaterial.WOOD, ToolMaterial.STONE);
+	public static final ModItemWeapon stone_stone_trident = new Trident(ToolMaterial.STONE, ToolMaterial.STONE);
+	public static final ModItemWeapon stone_gold_trident = new Trident(ToolMaterial.GOLD, ToolMaterial.STONE);
+	public static final ModItemWeapon stone_iron_trident = new Trident(ToolMaterial.IRON, ToolMaterial.STONE);
+	public static final ModItemWeapon stone_diamond_trident = new Trident(ToolMaterial.EMERALD, ToolMaterial.STONE);
+	public static final ModItemWeapon stone_colored_trident = new Trident(ModItemMaterials.COLORED, ToolMaterial.STONE);
+	public static final ModItemWeapon gold_wood_trident = new Trident(ToolMaterial.WOOD, ToolMaterial.GOLD);
+	public static final ModItemWeapon gold_stone_trident = new Trident(ToolMaterial.STONE, ToolMaterial.GOLD);
+	public static final ModItemWeapon gold_gold_trident = new Trident(ToolMaterial.GOLD, ToolMaterial.GOLD);
+	public static final ModItemWeapon gold_iron_trident = new Trident(ToolMaterial.IRON, ToolMaterial.GOLD);
+	public static final ModItemWeapon gold_diamond_trident = new Trident(ToolMaterial.EMERALD, ToolMaterial.GOLD);
+	public static final ModItemWeapon gold_colored_trident = new Trident(ModItemMaterials.COLORED, ToolMaterial.GOLD);
+	public static final ModItemWeapon iron_wood_trident = new Trident(ToolMaterial.WOOD, ToolMaterial.IRON);
+	public static final ModItemWeapon iron_stone_trident = new Trident(ToolMaterial.STONE, ToolMaterial.IRON);
+	public static final ModItemWeapon iron_gold_trident = new Trident(ToolMaterial.GOLD, ToolMaterial.IRON);
+	public static final ModItemWeapon iron_iron_trident = new Trident(ToolMaterial.IRON, ToolMaterial.IRON);
+	public static final ModItemWeapon iron_diamond_trident = new Trident(ToolMaterial.EMERALD, ToolMaterial.IRON);
+	public static final ModItemWeapon iron_colored_trident = new Trident(ModItemMaterials.COLORED, ToolMaterial.IRON);
+	public static final ModItemWeapon diamond_wood_trident = new Trident(ToolMaterial.WOOD, ToolMaterial.EMERALD);
+	public static final ModItemWeapon diamond_stone_trident = new Trident(ToolMaterial.STONE, ToolMaterial.EMERALD);
+	public static final ModItemWeapon diamond_gold_trident = new Trident(ToolMaterial.GOLD, ToolMaterial.EMERALD);
+	public static final ModItemWeapon diamond_iron_trident = new Trident(ToolMaterial.IRON, ToolMaterial.EMERALD);
+	public static final ModItemWeapon diamond_diamond_trident = new Trident(ToolMaterial.EMERALD, ToolMaterial.EMERALD);
+	public static final ModItemWeapon diamond_colored_trident = new Trident(ModItemMaterials.COLORED, ToolMaterial.EMERALD);
+	public static final ModItemWeapon colored_wood_trident = new Trident(ToolMaterial.WOOD, ModItemMaterials.COLORED);
+	public static final ModItemWeapon colored_stone_trident = new Trident(ToolMaterial.STONE, ModItemMaterials.COLORED);
+	public static final ModItemWeapon colored_gold_trident = new Trident(ToolMaterial.GOLD, ModItemMaterials.COLORED);
+	public static final ModItemWeapon colored_iron_trident = new Trident(ToolMaterial.IRON, ModItemMaterials.COLORED);
+	public static final ModItemWeapon colored_diamond_trident = new Trident(ToolMaterial.EMERALD, ModItemMaterials.COLORED);
+	public static final ModItemWeapon colored_colored_trident = new Trident(ModItemMaterials.COLORED, ModItemMaterials.COLORED);
 	public static final ModItemWeapon wood_sword = new ColoredSword(ToolMaterial.WOOD);
 	public static final ModItemWeapon stone_sword = new ColoredSword(ToolMaterial.STONE);
 	public static final ModItemWeapon gold_sword = new ColoredSword(ToolMaterial.GOLD);
@@ -55,10 +88,42 @@ public class ModItems {
 	public static void init() {
 		
 		//Register the items
-		GameRegistry.registerItem(stone_trident, "stone_trident");
-		GameRegistry.registerItem(gold_trident, "gold_trident");
-		GameRegistry.registerItem(iron_trident, "iron_trident");
-		GameRegistry.registerItem(diamond_trident, "diamond_trident");
+		GameRegistry.registerItem(wood_wood_trident, "wood_wood_trident");
+		GameRegistry.registerItem(wood_stone_trident, "wood_stone_trident");
+		GameRegistry.registerItem(wood_gold_trident, "wood_gold_trident");
+		GameRegistry.registerItem(wood_iron_trident, "wood_iron_trident");
+		GameRegistry.registerItem(wood_diamond_trident, "wood_diamond_trident");
+		GameRegistry.registerItem(wood_colored_trident, "wood_colored_trident");
+		GameRegistry.registerItem(stone_wood_trident, "stone_wood_trident");
+		GameRegistry.registerItem(stone_stone_trident, "stone_stone_trident");
+		GameRegistry.registerItem(stone_gold_trident, "stone_gold_trident");
+		GameRegistry.registerItem(stone_iron_trident, "stone_iron_trident");
+		GameRegistry.registerItem(stone_diamond_trident, "stone_diamond_trident");
+		GameRegistry.registerItem(stone_colored_trident, "stone_colored_trident");
+		GameRegistry.registerItem(gold_wood_trident, "gold_wood_trident");
+		GameRegistry.registerItem(gold_stone_trident, "gold_stone_trident");
+		GameRegistry.registerItem(gold_gold_trident, "gold_gold_trident");
+		GameRegistry.registerItem(gold_iron_trident, "gold_iron_trident");
+		GameRegistry.registerItem(gold_diamond_trident, "gold_diamond_trident");
+		GameRegistry.registerItem(gold_colored_trident, "gold_colored_trident");
+		GameRegistry.registerItem(iron_wood_trident, "iron_wood_trident");
+		GameRegistry.registerItem(iron_stone_trident, "iron_stone_trident");
+		GameRegistry.registerItem(iron_gold_trident, "iron_gold_trident");
+		GameRegistry.registerItem(iron_iron_trident, "iron_iron_trident");
+		GameRegistry.registerItem(iron_diamond_trident, "iron_diamond_trident");
+		GameRegistry.registerItem(iron_colored_trident, "iron_colored_trident");
+		GameRegistry.registerItem(diamond_wood_trident, "diamond_wood_trident");
+		GameRegistry.registerItem(diamond_stone_trident, "diamond_stone_trident");
+		GameRegistry.registerItem(diamond_gold_trident, "diamond_gold_trident");
+		GameRegistry.registerItem(diamond_iron_trident, "diamond_iron_trident");
+		GameRegistry.registerItem(diamond_diamond_trident, "diamond_diamond_trident");
+		GameRegistry.registerItem(diamond_colored_trident, "diamond_colored_trident");
+		GameRegistry.registerItem(colored_wood_trident, "colored_wood_trident");
+		GameRegistry.registerItem(colored_stone_trident, "colored_stone_trident");
+		GameRegistry.registerItem(colored_gold_trident, "colored_gold_trident");
+		GameRegistry.registerItem(colored_iron_trident, "colored_iron_trident");
+		GameRegistry.registerItem(colored_diamond_trident, "colored_diamond_trident");
+		GameRegistry.registerItem(colored_colored_trident, "colored_colored_trident");
 		GameRegistry.registerItem(wood_sword, "wood_sword");
 		GameRegistry.registerItem(stone_sword, "stone_sword");
 		GameRegistry.registerItem(gold_sword, "gold_sword");

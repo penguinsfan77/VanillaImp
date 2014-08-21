@@ -16,7 +16,6 @@ import net.minecraft.util.IIcon;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-//TODO: fix textures
 public class Sticks extends ModItem {
 	
 	private HashMap icons = new HashMap<Integer, IIcon>();
@@ -29,6 +28,11 @@ public class Sticks extends ModItem {
 		this.setMaxStackSize(64);
 		this.setHasSubtypes(true);
 		
+	}
+	
+	@Override
+	public boolean requiresMultipleRenderPasses() {
+		return true;
 	}
 	
 	@Override

@@ -1,7 +1,15 @@
 package io.github.penguinsfan77.randomstuff.items;
 
+import io.github.penguinsfan77.randomstuff.references.Colors;
+import io.github.penguinsfan77.randomstuff.references.NBTTags;
+import io.github.penguinsfan77.randomstuff.references.Names;
+import io.github.penguinsfan77.randomstuff.references.Textures;
+import io.github.penguinsfan77.randomstuff.utilities.NBTHelper;
+
 import java.util.HashMap;
 import java.util.List;
+
+import javax.lang.model.element.Modifier;
 
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
@@ -10,12 +18,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import io.github.penguinsfan77.randomstuff.references.Colors;
-import io.github.penguinsfan77.randomstuff.references.Names;
-import io.github.penguinsfan77.randomstuff.references.Textures;
 
 //TODO: make textures
-//TODO: add tool material based of head
 public class TridentHeads extends ModItem {
 	
 	private HashMap icons = new HashMap<Integer, IIcon>();
@@ -28,6 +32,31 @@ public class TridentHeads extends ModItem {
 		this.setMaxStackSize(64);
 		this.setHasSubtypes(true);
 		
+	}
+	
+	public ToolMaterial getToolMaterial(ItemStack item) {
+		
+		if (item.getItemDamage() < 16) {
+			return ModItemMaterials.COLORED;
+		} else if (item.getItemDamage() == 16) {
+			return ToolMaterial.STONE;
+		} else if (item.getItemDamage() == 17) {
+			return ToolMaterial.GOLD;
+		} else if (item.getItemDamage() == 18) {
+			return ToolMaterial.IRON;
+		} else if (item.getItemDamage() == 19) {
+			return ToolMaterial.EMERALD;
+		} else if (item.getItemDamage() == 20) {
+			return ToolMaterial.WOOD;
+		} else {
+			return null;
+		}
+		
+	}
+	
+	@Override
+	public boolean requiresMultipleRenderPasses() {
+		return true;
 	}
 	
 	@Override
@@ -46,11 +75,12 @@ public class TridentHeads extends ModItem {
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IIconRegister iconRegister) {
 		
-		icons.put(0, iconRegister.registerIcon(Textures.PREFIX + "colored_trident_head"));
-		icons.put(16, iconRegister.registerIcon(Textures.PREFIX + "stone_trident_head"));
-		icons.put(17, iconRegister.registerIcon(Textures.PREFIX + "gold_trident_head"));
-		icons.put(18, iconRegister.registerIcon(Textures.PREFIX + "iron_trident_head"));
-		icons.put(19, iconRegister.registerIcon(Textures.PREFIX + "emerald_trident_head"));
+		icons.put(0, iconRegister.registerIcon(Textures.PREFIX + "colored_trident_head_item"));
+		icons.put(16, iconRegister.registerIcon(Textures.PREFIX + "stone_trident_head_item"));
+		icons.put(17, iconRegister.registerIcon(Textures.PREFIX + "gold_trident_head_item"));
+		icons.put(18, iconRegister.registerIcon(Textures.PREFIX + "iron_trident_head_item"));
+		icons.put(19, iconRegister.registerIcon(Textures.PREFIX + "emerald_trident_head_item"));
+		icons.put(20, iconRegister.registerIcon(Textures.PREFIX + "wood_trident_head_item"));
 		
 	}
 	
@@ -83,7 +113,7 @@ public class TridentHeads extends ModItem {
     @SideOnly(Side.CLIENT)
     public void getSubItems(Item item, CreativeTabs tab, List list) {
 
-    	for (int meta = 0; meta < 20; meta++) {
+    	for (int meta = 0; meta < 21; meta++) {
     		
     		list.add(new ItemStack(this, 1, meta));
     		

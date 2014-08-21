@@ -243,18 +243,8 @@ public class ColoredItemsRecipe implements IRecipe {
 				NBTHelper.setString(itemstack, NBTTags.HANDLE, NBTTags.Values.DIAMOND);
 			}
 			if (head != null) {
-				//TODO: change durability based of head
 				if (head.getItemDamage() < 16) {
-					NBTHelper.setString(itemstack, NBTTags.HANDLE_COLOR, Colors.fromNumber[head.getItemDamage()]);
-					NBTHelper.setString(itemstack, NBTTags.HANDLE, NBTTags.Values.COLORED);
-				} else if (head.getItemDamage() == 16) {
-					NBTHelper.setString(itemstack, NBTTags.HANDLE, NBTTags.Values.STONE);
-				} else if (head.getItemDamage() == 17) {
-					NBTHelper.setString(itemstack, NBTTags.HANDLE, NBTTags.Values.GOLD);
-				} else if (head.getItemDamage() == 18) {
-					NBTHelper.setString(itemstack, NBTTags.HANDLE, NBTTags.Values.IRON);
-				} else if (head.getItemDamage() == 19) {
-					NBTHelper.setString(itemstack, NBTTags.HANDLE, NBTTags.Values.DIAMOND);
+					NBTHelper.setString(itemstack, NBTTags.HEAD_COLOR, Colors.fromNumber[head.getItemDamage()]);
 				}
 			}
 			return itemstack;

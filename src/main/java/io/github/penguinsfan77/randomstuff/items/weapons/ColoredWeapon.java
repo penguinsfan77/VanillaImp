@@ -1,5 +1,6 @@
 package io.github.penguinsfan77.randomstuff.items.weapons;
 
+import io.github.penguinsfan77.randomstuff.items.ModItemMaterials;
 import io.github.penguinsfan77.randomstuff.references.Colors;
 import io.github.penguinsfan77.randomstuff.references.NBTTags;
 import io.github.penguinsfan77.randomstuff.references.Textures;
@@ -88,6 +89,8 @@ public class ColoredWeapon extends ModItemWeapon {
 		
 		if (renderPass == 0 && NBTHelper.hasTag(item, NBTTags.HANDLE_COLOR)) {
 			return Integer.parseInt(NBTHelper.getString(item, NBTTags.HANDLE_COLOR), 16);
+		} else if (renderPass == 1 && material.equals(ModItemMaterials.COLORED) && NBTHelper.hasTag(item, NBTTags.BASE_COLOR)) {
+			return Integer.parseInt(NBTHelper.getString(item, NBTTags.BASE_COLOR), 16);
 		}
 
 		return super.getColorFromItemStack(item, renderPass);

@@ -1,5 +1,6 @@
 package io.github.penguinsfan77.randomstuff.items.weapons;
 
+import io.github.penguinsfan77.randomstuff.items.ModItemMaterials;
 import io.github.penguinsfan77.randomstuff.references.NBTTags;
 import io.github.penguinsfan77.randomstuff.references.Textures;
 import io.github.penguinsfan77.randomstuff.utilities.NBTHelper;
@@ -15,11 +16,18 @@ import net.minecraft.util.IIcon;
 
 public class Trident extends ColoredWeapon {
 	
-	private HashMap heads = new HashMap<String, IIcon>();
+	private HashMap heads = new HashMap<ToolMaterial, IIcon>();
 	
-	public Trident(ToolMaterial mat) {
+	private ToolMaterial HeadMaterial;
+	
+	public Trident(ToolMaterial tipMat, ToolMaterial headMat) {
 		
-		super(mat, "trident");
+		super(tipMat, "trident");
+		
+		this.HeadMaterial = headMat;
+		
+		this.setUnlocalizedName(headMat.toString().toLowerCase() + "_" + tipMat.toString().toLowerCase() + "_trident");
+		super.setMaxDamage(headMat.getMaxUses());
 		
 	}
 	
@@ -27,12 +35,12 @@ public class Trident extends ColoredWeapon {
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IIconRegister iconRegister) {
 
-		heads.put("wood", iconRegister.registerIcon(Textures.PREFIX + "wood_trident_head"));
-		heads.put("stone", iconRegister.registerIcon(Textures.PREFIX + "stone_trident_head"));
-		heads.put("iron", iconRegister.registerIcon(Textures.PREFIX + "iron_trident_head"));
-		heads.put("gold", iconRegister.registerIcon(Textures.PREFIX + "gold_trident_head"));
-		heads.put("diamond", iconRegister.registerIcon(Textures.PREFIX + "emerald_trident_head"));
-		heads.put("colored", iconRegister.registerIcon(Textures.PREFIX + "colored_trident_head"));
+		heads.put(ToolMaterial.WOOD, iconRegister.registerIcon(Textures.PREFIX + "wood_trident_head"));
+		heads.put(ToolMaterial.STONE, iconRegister.registerIcon(Textures.PREFIX + "stone_trident_head"));
+		heads.put(ToolMaterial.IRON, iconRegister.registerIcon(Textures.PREFIX + "iron_trident_head"));
+		heads.put(ToolMaterial.GOLD, iconRegister.registerIcon(Textures.PREFIX + "gold_trident_head"));
+		heads.put(ToolMaterial.EMERALD, iconRegister.registerIcon(Textures.PREFIX + "emerald_trident_head"));
+		heads.put(ModItemMaterials.COLORED, iconRegister.registerIcon(Textures.PREFIX + "colored_trident_head"));
 		super.registerIcons(iconRegister);
 		
 	}
@@ -41,11 +49,7 @@ public class Trident extends ColoredWeapon {
 	public IIcon getIcon(ItemStack stack, int pass) {
 
 		if (pass == 2) {
-			if (NBTHelper.hasTag(stack, NBTTags.HEAD)) {
-				return (IIcon) heads.get(NBTHelper.getString(stack, NBTTags.HEAD));
-			} else {
-				return (IIcon) heads.get("gold");
-			}
+			return (IIcon) heads.get(HeadMaterial);
 		} else {
 			return super.getIcon(stack, pass);
 		}
@@ -55,8 +59,8 @@ public class Trident extends ColoredWeapon {
 	@Override
 	public int getColorFromItemStack(ItemStack item, int renderPass) {
 		
-		if (renderPass == 2 && NBTHelper.hasTag(item, NBTTags.HEAD)) {
-			if (NBTHelper.getString(item, NBTTags.HEAD).equalsIgnoreCase("colored")) {
+		if (renderPass == 2 && HeadMaterial.equals(ModItemMaterials.COLORED)) {
+			if (NBTHelper.hasTag(item, NBTTags.HEAD_COLOR)) {
 				return Integer.parseInt(NBTHelper.getString(item, NBTTags.HEAD_COLOR), 16);
 			}
 		}

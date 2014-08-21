@@ -12,7 +12,7 @@ public class ModCreativeTab {
 		@Override
 		public Item getTabIconItem() {
 			
-			return ModItems.gold_trident;
+			return ModItems.iron_hammer;
 			
 		}
 		

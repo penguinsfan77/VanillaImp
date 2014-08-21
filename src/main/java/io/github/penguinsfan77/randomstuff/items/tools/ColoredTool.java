@@ -1,5 +1,6 @@
 package io.github.penguinsfan77.randomstuff.items.tools;
 
+import io.github.penguinsfan77.randomstuff.items.ModItemMaterials;
 import io.github.penguinsfan77.randomstuff.references.Colors;
 import io.github.penguinsfan77.randomstuff.references.NBTTags;
 import io.github.penguinsfan77.randomstuff.references.Names;
@@ -61,7 +62,6 @@ public class ColoredTool extends ModItemTool {
 	public void registerIcons(IIconRegister iconRegister) {
 
 		handles.put("colored", iconRegister.registerIcon(Textures.PREFIX + "colored_" + toolName + "_handle"));
-		handles.put("wood", iconRegister.registerIcon(Textures.PREFIX + toolName + "_handle"));
 		handles.put("stone", iconRegister.registerIcon(Textures.PREFIX + "stone_" + toolName + "_handle"));
 		handles.put("iron", iconRegister.registerIcon(Textures.PREFIX + "iron_" + toolName + "_handle"));
 		handles.put("gold", iconRegister.registerIcon(Textures.PREFIX + "gold_" + toolName + "_handle"));
@@ -77,7 +77,7 @@ public class ColoredTool extends ModItemTool {
 			if (NBTHelper.hasTag(stack, NBTTags.HANDLE)) {
 				return (IIcon) handles.get(NBTHelper.getString(stack, NBTTags.HANDLE));
 			} else {
-				return (IIcon) handles.get(NBTTags.Values.WOOD);
+				return (IIcon) handles.get("iron");
 			}
 		} else if (pass == 1) {
 			return base;
@@ -93,6 +93,8 @@ public class ColoredTool extends ModItemTool {
 		
 		if (renderPass == 0 && NBTHelper.hasTag(item, NBTTags.HANDLE_COLOR)) {
 			return Integer.parseInt(NBTHelper.getString(item, NBTTags.HANDLE_COLOR), 16);
+		} else if (renderPass == 1 && material.equals(ModItemMaterials.COLORED) && NBTHelper.hasTag(item, NBTTags.BASE_COLOR)) {
+			return Integer.parseInt(NBTHelper.getString(item, NBTTags.BASE_COLOR), 16);
 		}
 
 		return super.getColorFromItemStack(item, renderPass);

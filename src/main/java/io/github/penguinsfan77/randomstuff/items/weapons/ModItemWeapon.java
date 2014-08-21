@@ -11,9 +11,12 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class ModItemWeapon extends ItemSword {
 	
+	protected ToolMaterial material;
+	
 	public ModItemWeapon(ToolMaterial material) {
 		
 		super(material);
+		this.material = material;
 		
 		this.setCreativeTab(ModCreativeTab.RANDOM_STUFF_TAB);
 

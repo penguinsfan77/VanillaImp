@@ -13,7 +13,7 @@ public class Names {
 		public static final String STICK = "stick";
 		public static final String TRIDENT_HEAD = "trident_head";
 		public static final class Types {
-			public static final String[] fromDamage = {"black", "red", "green", "brown", "blue", "purple", "cyan", "light_gray", "gray", "pink", "lime", "yellow", "light_blue", "magenta", "orange", "white", "stone", "gold", "iron", "emerald"};
+			public static final String[] fromDamage = {"black", "red", "green", "brown", "blue", "purple", "cyan", "light_gray", "gray", "pink", "lime", "yellow", "light_blue", "magenta", "orange", "white", "stone", "gold", "iron", "diamond", "wood"};
 		}
 		
 	}

@@ -3,9 +3,9 @@ package io.github.penguinsfan77.randomstuff.references;
 public class NBTTags {
 	
 	public static final String HANDLE_COLOR = "handle_color";
+	public static final String BASE_COLOR = "base_color";
 	public static final String HEAD_COLOR = "head_color";
 	public static final String HANDLE = "handle_type";
-	public static final String HEAD = "head_type";
 	
 	public static final class Values {
 		
