@@ -3,11 +3,11 @@ package io.github.penguinsfan77.randomstuff.items.weapons;
 import net.minecraft.item.EnumAction;
 import net.minecraft.item.ItemStack;
 
-public class ColoredSword extends ColoredWeapon {
+public class ColoredSword extends ModItemWeapon {
 
 	public ColoredSword(ToolMaterial material) {
 		
-		super(material, "sword");
+		super(material, "sword", "iron");
 
 	}
 	

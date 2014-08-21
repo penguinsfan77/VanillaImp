@@ -15,13 +15,13 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.player.UseHoeEvent;
 import cpw.mods.fml.common.eventhandler.Event.Result;
 
-public class ColoredHoe extends ColoredTool {
+public class ColoredHoe extends ModItemTool {
 	
 	protected static final Set effectiveOn = Sets.newHashSet();
 
 	public ColoredHoe(ToolMaterial material) {
 		
-		super(0.0F, material, effectiveOn, "hoe");
+		super(0.0F, material, effectiveOn, "hoe", "iron");
 
 	}
 	

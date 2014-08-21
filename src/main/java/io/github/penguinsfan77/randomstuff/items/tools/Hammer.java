@@ -21,13 +21,13 @@ import net.minecraft.world.World;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent.Action;
 
-public class Hammer extends ColoredTool {
+public class Hammer extends ModItemTool {
 	
 	private static final Set effectiveOn = Sets.newHashSet(new Block[] {Blocks.stone, Blocks.stonebrick});
 	
 	public Hammer(ToolMaterial material) {
 		
-		super(2.0F, material, effectiveOn, "hammer");
+		super(2.0F, material, effectiveOn, "hammer", "wood");
 		
 		this.efficiencyOnProperMaterial = 999F;
 		

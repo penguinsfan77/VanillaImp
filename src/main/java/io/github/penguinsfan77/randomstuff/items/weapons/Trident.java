@@ -14,15 +14,15 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 
 
-public class Trident extends ColoredWeapon {
+public class Trident extends ModItemWeapon {
 	
 	private HashMap heads = new HashMap<ToolMaterial, IIcon>();
 	
-	private ToolMaterial HeadMaterial;
+	public ToolMaterial HeadMaterial;
 	
 	public Trident(ToolMaterial tipMat, ToolMaterial headMat) {
 		
-		super(tipMat, "trident");
+		super(tipMat, "trident", "gold");
 		
 		this.HeadMaterial = headMat;
 		

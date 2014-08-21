@@ -1,7 +1,10 @@
 package io.github.penguinsfan77.randomstuff.crafting;
 
+import io.github.penguinsfan77.randomstuff.items.ModItemMaterials;
+import io.github.penguinsfan77.randomstuff.items.weapons.Trident;
 import io.github.penguinsfan77.randomstuff.references.Colors;
 import io.github.penguinsfan77.randomstuff.references.NBTTags;
+import io.github.penguinsfan77.randomstuff.utilities.MaterialHelper;
 import io.github.penguinsfan77.randomstuff.utilities.NBTHelper;
 
 import java.util.ArrayList;
@@ -12,6 +15,7 @@ import net.minecraft.block.Block;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.InventoryCrafting;
 import net.minecraft.item.Item;
+import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.item.ItemTool;
@@ -125,13 +129,25 @@ public class ReColoredItemsRecipe implements IRecipe {
 
     	//TODO: fix for new recoloring
     	if (dye != null && tool != null) {
+    		ItemTool toolItem = null;
+    		ItemSword toolSword = null;
+    		if (tool.getItem() instanceof ItemTool) toolItem = (ItemTool) tool.getItem();
+    		if (tool.getItem() instanceof ItemSword) toolSword = (ItemSword) tool.getItem();
     		itemstack.setItemDamage(tool.getItemDamage());
     		if (NBTHelper.hasTag(tool, NBTTags.HANDLE) && (NBTHelper.getString(tool, NBTTags.HANDLE).equalsIgnoreCase(NBTTags.Values.COLORED) || NBTHelper.getString(tool, NBTTags.HANDLE).equalsIgnoreCase(NBTTags.Values.WOOD))) {
-        		NBTHelper.setString(itemstack, NBTTags.HANDLE_COLOR, Colors.fromNumber[dye.getItemDamage()]);
-        		NBTHelper.setString(itemstack, NBTTags.HANDLE, NBTTags.Values.COLORED);
+    			NBTHelper.setString(itemstack, NBTTags.HANDLE_COLOR, Colors.fromNumber[dye.getItemDamage()]);
+    			NBTHelper.setString(itemstack, NBTTags.HANDLE, NBTTags.Values.COLORED);
     		}
-    		if (NBTHelper.hasTag(tool, NBTTags.HEAD) && (NBTHelper.getString(tool, NBTTags.HEAD).equalsIgnoreCase(NBTTags.Values.COLORED) || NBTHelper.getString(tool, NBTTags.HEAD).equalsIgnoreCase(NBTTags.Values.WOOD))) {
-    			NBTHelper.setString(itemstack, NBTTags.HEAD_COLOR, Colors.fromNumber[dye.getItemDamage()]);
+    		if (tool.getItem() instanceof Trident) {
+    			Trident trident = (Trident) tool.getItem();
+    			if (trident.HeadMaterial.equals(ToolMaterial.WOOD) || trident.HeadMaterial.equals(ModItemMaterials.COLORED)) {
+    				NBTHelper.setString(itemstack, NBTTags.HEAD_COLOR, Colors.fromNumber[dye.getItemDamage()]);
+    			}
+    		}
+    		if (toolItem != null) {
+    			if (MaterialHelper.getToolMaterial(toolItem.getToolMaterialName()).equals(ToolMaterial.WOOD) || MaterialHelper.getToolMaterial(toolItem.getToolMaterialName()).equals(ModItemMaterials.COLORED)) {
+    				NBTHelper.setString(itemstack, NBTTags.BASE_COLOR, Colors.fromNumber[dye.getItemDamage()]);
+    			}
     		}
     	}
 

@@ -9,13 +9,13 @@ import net.minecraft.item.ItemStack;
 
 import com.google.common.collect.Sets;
 
-public class ColoredAxe extends ColoredTool {
+public class ColoredAxe extends ModItemTool {
 	
 	protected static final Set effectiveOn = Sets.newHashSet(new Block[] {Blocks.planks, Blocks.bookshelf, Blocks.log, Blocks.log2, Blocks.chest, Blocks.pumpkin, Blocks.lit_pumpkin});
 
 	public ColoredAxe(ToolMaterial material) {
 		
-		super(3.0F, material, effectiveOn, "axe");
+		super(3.0F, material, effectiveOn, "axe", "iron");
 
 	}
 	
