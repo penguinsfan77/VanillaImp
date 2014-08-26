@@ -1,25 +1,31 @@
 package io.github.penguinsfan77.randomstuff.items.tools;
 
-import io.github.penguinsfan77.randomstuff.creativeTab.ModCreativeTab;
+import io.github.penguinsfan77.randomstuff.RandomStuff;
+import io.github.penguinsfan77.randomstuff.creativeTab.ModCreativeTabs;
 import io.github.penguinsfan77.randomstuff.items.ModItemMaterials;
+import io.github.penguinsfan77.randomstuff.references.Colors;
 import io.github.penguinsfan77.randomstuff.references.NBTTags;
 import io.github.penguinsfan77.randomstuff.references.Textures;
 import io.github.penguinsfan77.randomstuff.references.ToolTips;
+import io.github.penguinsfan77.randomstuff.utilities.LogHelper;
 import io.github.penguinsfan77.randomstuff.utilities.NBTHelper;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Set;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemTool;
-import net.minecraft.item.Item.ToolMaterial;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.StatCollector;
+import net.minecraft.world.World;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 public class ModItemTool extends ItemTool {
 	
@@ -41,7 +47,7 @@ public class ModItemTool extends ItemTool {
 		
 		this.setUnlocalizedName(material.toString().toLowerCase() + "_" + toolName);
 		
-		this.setCreativeTab(ModCreativeTab.RANDOM_STUFF_TAB);
+		this.setCreativeTab(ModCreativeTabs.RANDOM_STUFF_TOOLS_TAB);
 
 	}
 	
@@ -77,8 +83,8 @@ public class ModItemTool extends ItemTool {
 	public IIcon getIcon(ItemStack stack, int pass) {
 
 		if (pass == 0) {
-			if (NBTHelper.hasTag(stack, NBTTags.HANDLE)) {
-				return (IIcon) handles.get(NBTHelper.getString(stack, NBTTags.HANDLE));
+			if (NBTHelper.hasRenderTag(stack, NBTTags.HANDLE)) {
+				return (IIcon) handles.get(NBTHelper.getRenderString(stack, NBTTags.HANDLE));
 			} else {
 				return (IIcon) handles.get(defualt);
 			}
@@ -94,10 +100,10 @@ public class ModItemTool extends ItemTool {
 	@SideOnly(Side.CLIENT)
 	public int getColorFromItemStack(ItemStack item, int renderPass) {
 		
-		if (renderPass == 0 && NBTHelper.hasTag(item, NBTTags.HANDLE_COLOR)) {
-			return Integer.parseInt(NBTHelper.getString(item, NBTTags.HANDLE_COLOR), 16);
-		} else if (renderPass == 1 && material.equals(ModItemMaterials.COLORED) && NBTHelper.hasTag(item, NBTTags.BASE_COLOR)) {
-			return Integer.parseInt(NBTHelper.getString(item, NBTTags.BASE_COLOR), 16);
+		if (renderPass == 0 && NBTHelper.hasRenderTag(item, NBTTags.HANDLE_COLOR)) {
+			return Integer.parseInt(NBTHelper.getRenderString(item, NBTTags.HANDLE_COLOR), 16);
+		} else if (renderPass == 1 && material.equals(ModItemMaterials.COLORED) && NBTHelper.hasRenderTag(item, NBTTags.BASE_COLOR)) {
+			return Integer.parseInt(NBTHelper.getRenderString(item, NBTTags.BASE_COLOR), 16);
 		}
 
 		return super.getColorFromItemStack(item, renderPass);
@@ -107,10 +113,103 @@ public class ModItemTool extends ItemTool {
 	@Override
 	public void addInformation(ItemStack item, EntityPlayer player, List list, boolean bool) {
 
-		if (NBTHelper.hasTag(item, NBTTags.HANDLE) && NBTHelper.getString(item, NBTTags.HANDLE).equalsIgnoreCase(NBTTags.Values.COLORED)) {
-			list.add(StatCollector.translateToLocal(ToolTips.COLOR) + ": " + StatCollector.translateToLocal((String) ToolTips.Values.COLORS.get(NBTHelper.getString(item, NBTTags.HANDLE_COLOR))));
+		if (NBTHelper.hasRenderTag(item, NBTTags.HANDLE)) {
+			if (NBTHelper.getRenderString(item, NBTTags.HANDLE).equalsIgnoreCase(NBTTags.Values.COLORED)) {
+				list.add(StatCollector.translateToLocal(ToolTips.COLOR) + ": " + StatCollector.translateToLocal((String) ToolTips.Values.COLORS.get(NBTHelper.getRenderString(item, NBTTags.HANDLE_COLOR))));
+			} else {
+				list.add(StatCollector.translateToLocal(ToolTips.HANDLE) + ": " + StatCollector.translateToLocal((String) ToolTips.Values.HANDLES.get(NBTHelper.getRenderString(item, NBTTags.HANDLE))));
+			}
 		}
 		super.addInformation(item, player, list, bool);
+
+	}
+	
+	@Override
+	@SideOnly(Side.CLIENT)
+	public void getSubItems(Item item, CreativeTabs tab, List list) {
+		
+		ItemStack stack = new ItemStack(this);
+		
+		for (int i = 0; i < 16; i++) {
+			NBTHelper.setRenderString(stack, NBTTags.HANDLE, NBTTags.Values.COLORED);
+			NBTHelper.setRenderString(stack, NBTTags.HANDLE_COLOR, Colors.fromNumber[i]);
+			if (material.equals(ModItemMaterials.COLORED)) {
+				for (int x = 0; x < 16; x++) {
+					NBTHelper.setRenderString(stack, NBTTags.HANDLE, NBTTags.Values.COLORED);
+					NBTHelper.setRenderString(stack, NBTTags.HANDLE_COLOR, Colors.fromNumber[i]);
+					NBTHelper.setRenderString(stack, NBTTags.BASE_COLOR, Colors.fromNumber[x]);
+					list.add(stack);
+					stack = new ItemStack(this);
+				}
+				continue;
+			}
+			list.add(stack);
+			stack = new ItemStack(this);
+		}
+		if (material.equals(ModItemMaterials.COLORED)) {
+			for (int i = 0; i < 16; i++) {
+				NBTHelper.setRenderString(stack, NBTTags.HANDLE, NBTTags.Values.DIAMOND);
+				NBTHelper.setRenderString(stack, NBTTags.BASE_COLOR, Colors.fromNumber[i]);
+				list.add(stack);
+				stack = new ItemStack(this);
+			}
+		} else {
+			NBTHelper.setRenderString(stack, NBTTags.HANDLE, NBTTags.Values.DIAMOND);
+			list.add(stack);
+			stack = new ItemStack(this);
+		}
+		if (material.equals(ModItemMaterials.COLORED)) {
+			for (int i = 0; i < 16; i++) {
+				NBTHelper.setRenderString(stack, NBTTags.HANDLE, NBTTags.Values.GOLD);
+				NBTHelper.setRenderString(stack, NBTTags.BASE_COLOR, Colors.fromNumber[i]);
+				list.add(stack);
+				stack = new ItemStack(this);
+			}
+		} else {
+			NBTHelper.setRenderString(stack, NBTTags.HANDLE, NBTTags.Values.GOLD);
+			list.add(stack);
+			stack = new ItemStack(this);
+		}
+		if (material.equals(ModItemMaterials.COLORED)) {
+			for (int i = 0; i < 16; i++) {
+				NBTHelper.setRenderString(stack, NBTTags.HANDLE, NBTTags.Values.IRON);
+				NBTHelper.setRenderString(stack, NBTTags.BASE_COLOR, Colors.fromNumber[i]);
+				list.add(stack);
+				stack = new ItemStack(this);
+			}
+		} else {
+			NBTHelper.setRenderString(stack, NBTTags.HANDLE, NBTTags.Values.IRON);
+			list.add(stack);
+			stack = new ItemStack(this);
+		}
+		if (material.equals(ModItemMaterials.COLORED)) {
+			for (int i = 0; i < 16; i++) {
+				NBTHelper.setRenderString(stack, NBTTags.HANDLE, NBTTags.Values.STONE);
+				NBTHelper.setRenderString(stack, NBTTags.BASE_COLOR, Colors.fromNumber[i]);
+				list.add(stack);
+				stack = new ItemStack(this);
+			}
+		} else {
+			NBTHelper.setRenderString(stack, NBTTags.HANDLE, NBTTags.Values.STONE);
+			list.add(stack);
+			stack = new ItemStack(this);
+		}
+		if (toolName.equalsIgnoreCase("hammer")) {
+			if (material.equals(ModItemMaterials.COLORED)) {
+				for (int i = 0; i < 16; i++) {
+					NBTHelper.setRenderString(stack, NBTTags.HANDLE, NBTTags.Values.WOOD);
+					NBTHelper.setRenderString(stack, NBTTags.BASE_COLOR, Colors.fromNumber[i]);
+					list.add(stack);
+					stack = new ItemStack(this);
+				}
+			} else {
+				NBTHelper.setRenderString(stack, NBTTags.HANDLE, NBTTags.Values.WOOD);
+				list.add(stack);
+				stack = new ItemStack(this);
+			}
+		}
+		
+		RandomStuff.itemVaraities += list.size();
 		
 	}
 	

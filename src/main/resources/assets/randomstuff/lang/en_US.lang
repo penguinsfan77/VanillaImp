@@ -65,14 +65,17 @@ item.randomstuff:colored_stick.black.name=Black Stick
 tile.randomstuff:cracked_stone.name=Cracked Stone
 
 ##################
-## Creative Tab ##
+## Creative Tabs ##
 ##################
 itemGroup.randomstuff=Random Stuff
+itemGroup.randomstufftools=Random Stuff Tools
+itemGroup.randomstuffweapons=Random Stuff Weapons
 
 ####################
 ## Item Tool Tips ##
 ####################
 tooltip.name.handleColor=Handle Color
+tooltip.name.handleType=Handle Type
 tooltip.value.color.white=White
 tooltip.value.color.orange=Orange
 tooltip.value.color.magenta=Magenta
@@ -89,3 +92,8 @@ tooltip.value.color.brown=Brown
 tooltip.value.color.green=Green
 tooltip.value.color.red=Red
 tooltip.value.color.black=Black
+tooltip.value.handle.diamond=Diamond
+tooltip.value.handle.gold=Gold
+tooltip.value.handle.iron=Iron
+tooltip.value.handle.stone=Stone
+tooltip.value.handle.wood=Wood

@@ -1,7 +1,9 @@
 package io.github.penguinsfan77.randomstuff.utilities;
 
+import io.github.penguinsfan77.randomstuff.references.Reference;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.nbt.NBTTagList;
 
 public class NBTHelper {
 	
@@ -10,12 +12,20 @@ public class NBTHelper {
         return itemStack != null && itemStack.stackTagCompound != null && itemStack.stackTagCompound.hasKey(keyName);
         
     }
+	
+	public static boolean hasRenderTag(ItemStack itemStack, String keyName) {
+		
+		initNBTRenderTagList(itemStack);
+		
+        return getRenderTagList(itemStack).getCompoundTagAt(0).hasKey(keyName);
+        
+    }
 
     public static void removeTag(ItemStack itemStack, String keyName) {
     	
         if (itemStack.stackTagCompound != null)
         {
-            itemStack.stackTagCompound.removeTag(keyName);
+        	itemStack.stackTagCompound.removeTag(keyName);
         }
         
     }
@@ -27,12 +37,32 @@ public class NBTHelper {
      *         The ItemStack for which its NBT Tag Compound is being checked for initialization
      */
     private static void initNBTTagCompound(ItemStack itemStack) {
+
+    	if (itemStack.stackTagCompound == null)
+    	{
+    		itemStack.setTagCompound(new NBTTagCompound());
+    	}
+
+    }
+    
+    private static void initNBTRenderTagList(ItemStack itemStack) {
     	
-        if (itemStack.stackTagCompound == null)
-        {
-            itemStack.setTagCompound(new NBTTagCompound());
-        }
-        
+    	initNBTTagCompound(itemStack);
+
+    	if (!itemStack.stackTagCompound.hasKey("RenderData"))
+    	{
+    		itemStack.stackTagCompound.setTag("RenderData", new NBTTagList());
+    		((NBTTagList) itemStack.stackTagCompound.getTag("RenderData")).appendTag(new NBTTagCompound());
+    	}
+
+    }
+    
+    private static NBTTagList getRenderTagList(ItemStack stack) {
+    	
+    	initNBTRenderTagList(stack);
+    	
+    	return (NBTTagList) stack.stackTagCompound.getTag("RenderData");
+    	
     }
 
     public static void setLong(ItemStack itemStack, String keyName, long keyValue) {
@@ -209,6 +239,22 @@ public class NBTHelper {
 
         itemStack.stackTagCompound.setDouble(keyName, keyValue);
         
+    }
+    
+    public static void setRenderString(ItemStack stack, String key, String value) {
+    	
+    	initNBTRenderTagList(stack);
+    	
+    	getRenderTagList(stack).getCompoundTagAt(0).setString(key, value);
+    	
+    }
+    
+    public static String getRenderString(ItemStack stack, String key) {
+    	
+    	initNBTRenderTagList(stack);
+    	
+    	return getRenderTagList(stack).getCompoundTagAt(0).getString(key);
+    	
     }
 
 }

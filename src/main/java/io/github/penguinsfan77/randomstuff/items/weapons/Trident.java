@@ -1,15 +1,20 @@
 package io.github.penguinsfan77.randomstuff.items.weapons;
 
+import io.github.penguinsfan77.randomstuff.RandomStuff;
 import io.github.penguinsfan77.randomstuff.items.ModItemMaterials;
+import io.github.penguinsfan77.randomstuff.references.Colors;
 import io.github.penguinsfan77.randomstuff.references.NBTTags;
 import io.github.penguinsfan77.randomstuff.references.Textures;
 import io.github.penguinsfan77.randomstuff.utilities.NBTHelper;
 
 import java.util.HashMap;
+import java.util.List;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 
@@ -73,6 +78,154 @@ public class Trident extends ModItemWeapon {
 
 		return 3;
 		
+	}
+	
+	@Override
+	@SideOnly(Side.CLIENT)
+	public void getSubItems(Item item, CreativeTabs tab, List list) {
+		
+		ItemStack stack = new ItemStack(this);
+		
+		for (int i = 0; i < 16; i++) {
+			NBTHelper.setRenderString(stack, NBTTags.HANDLE, NBTTags.Values.COLORED);
+			NBTHelper.setRenderString(stack, NBTTags.HANDLE_COLOR, Colors.fromNumber[i]);
+			if (material.equals(ModItemMaterials.COLORED)) {
+				for (int x = 0; x < 16; x++) {
+					NBTHelper.setRenderString(stack, NBTTags.HANDLE, NBTTags.Values.COLORED);
+					NBTHelper.setRenderString(stack, NBTTags.HANDLE_COLOR, Colors.fromNumber[i]);
+					NBTHelper.setRenderString(stack, NBTTags.BASE_COLOR, Colors.fromNumber[x]);
+					if (HeadMaterial.equals(ModItemMaterials.COLORED)) {
+						for (int y = 0; y < 16; y++) {
+							NBTHelper.setRenderString(stack, NBTTags.HANDLE, NBTTags.Values.COLORED);
+							NBTHelper.setRenderString(stack, NBTTags.HANDLE_COLOR, Colors.fromNumber[i]);
+							NBTHelper.setRenderString(stack, NBTTags.BASE_COLOR, Colors.fromNumber[x]);
+							NBTHelper.setRenderString(stack, NBTTags.HEAD_COLOR, Colors.fromNumber[y]);
+							list.add(stack);
+							stack = new ItemStack(this);
+						}
+						continue;
+					}
+					list.add(stack);
+					stack = new ItemStack(this);
+				}
+				continue;
+			}
+			list.add(stack);
+			stack = new ItemStack(this);
+		}
+		if (material.equals(ModItemMaterials.COLORED)) {
+			for (int i = 0; i < 16; i++) {
+				NBTHelper.setRenderString(stack, NBTTags.HANDLE, NBTTags.Values.DIAMOND);
+				NBTHelper.setRenderString(stack, NBTTags.BASE_COLOR, Colors.fromNumber[i]);
+				if (HeadMaterial.equals(ModItemMaterials.COLORED)) {
+					for (int y = 0; y < 16; y++) {
+						NBTHelper.setRenderString(stack, NBTTags.HANDLE, NBTTags.Values.DIAMOND);
+						NBTHelper.setRenderString(stack, NBTTags.BASE_COLOR, Colors.fromNumber[i]);
+						NBTHelper.setRenderString(stack, NBTTags.HEAD_COLOR, Colors.fromNumber[y]);
+						list.add(stack);
+						stack = new ItemStack(this);
+					}
+				} else {
+					list.add(stack);
+					stack = new ItemStack(this);
+				}
+			}
+		} else {
+			NBTHelper.setRenderString(stack, NBTTags.HANDLE, NBTTags.Values.DIAMOND);
+			list.add(stack);
+			stack = new ItemStack(this);
+		}
+		if (material.equals(ModItemMaterials.COLORED)) {
+			for (int i = 0; i < 16; i++) {
+				NBTHelper.setRenderString(stack, NBTTags.HANDLE, NBTTags.Values.GOLD);
+				NBTHelper.setRenderString(stack, NBTTags.BASE_COLOR, Colors.fromNumber[i]);
+				if (HeadMaterial.equals(ModItemMaterials.COLORED)) {
+					for (int y = 0; y < 16; y++) {
+						NBTHelper.setRenderString(stack, NBTTags.HANDLE, NBTTags.Values.GOLD);
+						NBTHelper.setRenderString(stack, NBTTags.BASE_COLOR, Colors.fromNumber[i]);
+						NBTHelper.setRenderString(stack, NBTTags.HEAD_COLOR, Colors.fromNumber[y]);
+						list.add(stack);
+						stack = new ItemStack(this);
+					}
+				} else {
+					list.add(stack);
+					stack = new ItemStack(this);
+				}
+			}
+		} else {
+			NBTHelper.setRenderString(stack, NBTTags.HANDLE, NBTTags.Values.GOLD);
+			list.add(stack);
+			stack = new ItemStack(this);
+		}
+		if (material.equals(ModItemMaterials.COLORED)) {
+			for (int i = 0; i < 16; i++) {
+				NBTHelper.setRenderString(stack, NBTTags.HANDLE, NBTTags.Values.IRON);
+				NBTHelper.setRenderString(stack, NBTTags.BASE_COLOR, Colors.fromNumber[i]);
+				if (HeadMaterial.equals(ModItemMaterials.COLORED)) {
+					for (int y = 0; y < 16; y++) {
+						NBTHelper.setRenderString(stack, NBTTags.HANDLE, NBTTags.Values.IRON);
+						NBTHelper.setRenderString(stack, NBTTags.BASE_COLOR, Colors.fromNumber[i]);
+						NBTHelper.setRenderString(stack, NBTTags.HEAD_COLOR, Colors.fromNumber[y]);
+						list.add(stack);
+						stack = new ItemStack(this);
+					}
+				} else {
+					list.add(stack);
+					stack = new ItemStack(this);
+				}
+			}
+		} else {
+			NBTHelper.setRenderString(stack, NBTTags.HANDLE, NBTTags.Values.IRON);
+			list.add(stack);
+			stack = new ItemStack(this);
+		}
+		if (material.equals(ModItemMaterials.COLORED)) {
+			for (int i = 0; i < 16; i++) {
+				NBTHelper.setRenderString(stack, NBTTags.HANDLE, NBTTags.Values.STONE);
+				NBTHelper.setRenderString(stack, NBTTags.BASE_COLOR, Colors.fromNumber[i]);
+				if (HeadMaterial.equals(ModItemMaterials.COLORED)) {
+					for (int y = 0; y < 16; y++) {
+						NBTHelper.setRenderString(stack, NBTTags.HANDLE, NBTTags.Values.STONE);
+						NBTHelper.setRenderString(stack, NBTTags.BASE_COLOR, Colors.fromNumber[i]);
+						NBTHelper.setRenderString(stack, NBTTags.HEAD_COLOR, Colors.fromNumber[y]);
+						list.add(stack);
+						stack = new ItemStack(this);
+					}
+				} else {
+					list.add(stack);
+					stack = new ItemStack(this);
+				}
+			}
+		} else {
+			NBTHelper.setRenderString(stack, NBTTags.HANDLE, NBTTags.Values.STONE);
+			list.add(stack);
+			stack = new ItemStack(this);
+		}
+		if (material.equals(ModItemMaterials.COLORED)) {
+			for (int i = 0; i < 16; i++) {
+				NBTHelper.setRenderString(stack, NBTTags.HANDLE, NBTTags.Values.WOOD);
+				NBTHelper.setRenderString(stack, NBTTags.BASE_COLOR, Colors.fromNumber[i]);
+				if (HeadMaterial.equals(ModItemMaterials.COLORED)) {
+					for (int y = 0; y < 16; y++) {
+						NBTHelper.setRenderString(stack, NBTTags.HANDLE, NBTTags.Values.WOOD);
+						NBTHelper.setRenderString(stack, NBTTags.BASE_COLOR, Colors.fromNumber[i]);
+						NBTHelper.setRenderString(stack, NBTTags.HEAD_COLOR, Colors.fromNumber[y]);
+						list.add(stack);
+						stack = new ItemStack(this);
+					}
+				} else {
+					list.add(stack);
+					stack = new ItemStack(this);
+				}
+			}
+		} else {
+			NBTHelper.setRenderString(stack, NBTTags.HANDLE, NBTTags.Values.WOOD);
+			list.add(stack);
+			stack = new ItemStack(this);
+		}
+		
+		RandomStuff.itemVaraities += list.size();
+
 	}
 
 }

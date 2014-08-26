@@ -1,6 +1,6 @@
 package io.github.penguinsfan77.randomstuff.items;
 
-import io.github.penguinsfan77.randomstuff.creativeTab.ModCreativeTab;
+import io.github.penguinsfan77.randomstuff.creativeTab.ModCreativeTabs;
 import io.github.penguinsfan77.randomstuff.references.Reference;
 import io.github.penguinsfan77.randomstuff.references.Textures;
 import io.github.penguinsfan77.randomstuff.utilities.LogHelper;
@@ -17,7 +17,7 @@ public class ModItem extends Item {
 		
         super();
         
-        this.setCreativeTab(ModCreativeTab.RANDOM_STUFF_TAB);
+        this.setCreativeTab(ModCreativeTabs.RANDOM_STUFF_TAB);
         
     }
 

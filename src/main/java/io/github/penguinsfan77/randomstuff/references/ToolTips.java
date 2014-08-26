@@ -5,6 +5,7 @@ import java.util.HashMap;
 public class ToolTips {
 	
 	public static final String COLOR = "tooltip.name.handleColor";
+	public static final String HANDLE = "tooltip.name.handleType";
 	
 	public static final class Values {
 		
@@ -25,6 +26,13 @@ public class ToolTips {
 			put("667F33", "tooltip.value.color.green");
 			put("993333", "tooltip.value.color.red");
 			put("191919", "tooltip.value.color.black");
+		}};
+		public static final HashMap HANDLES = new HashMap<String, String>() {{
+			put("diamond", "tooltip.value.handle.diamond");
+			put("gold", "tooltip.value.handle.gold");
+			put("iron", "tooltip.value.handle.iron");
+			put("stone", "tooltip.value.handle.stone");
+			put("wood", "tooltip.value.hanlde.wood");
 		}};
 		
 	}

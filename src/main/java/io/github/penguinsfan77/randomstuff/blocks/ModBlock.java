@@ -4,7 +4,7 @@ import java.util.Random;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import io.github.penguinsfan77.randomstuff.creativeTab.ModCreativeTab;
+import io.github.penguinsfan77.randomstuff.creativeTab.ModCreativeTabs;
 import io.github.penguinsfan77.randomstuff.references.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -18,7 +18,7 @@ public class ModBlock extends Block {
 		
         super(material);
         
-        this.setCreativeTab(ModCreativeTab.RANDOM_STUFF_TAB);
+        this.setCreativeTab(ModCreativeTabs.RANDOM_STUFF_TAB);
         
     }
 
