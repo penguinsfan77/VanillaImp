@@ -256,5 +256,17 @@ public class NBTHelper {
     	return getRenderTagList(stack).getCompoundTagAt(0).getString(key);
     	
     }
+    
+    public static NBTTagCompound getRenderTags(ItemStack stack) {
+    	
+    	return getRenderTagList(stack).getCompoundTagAt(0);
+    	
+    }
+    
+    public static void setRenderTags(ItemStack stack, NBTTagCompound tag) {
+    	
+    	getRenderTagList(stack).func_150304_a(0, tag);
+    	
+    }
 
 }

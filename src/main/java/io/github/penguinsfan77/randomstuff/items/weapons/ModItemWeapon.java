@@ -11,6 +11,7 @@ import io.github.penguinsfan77.randomstuff.references.NBTTags;
 import io.github.penguinsfan77.randomstuff.references.Reference;
 import io.github.penguinsfan77.randomstuff.references.Textures;
 import io.github.penguinsfan77.randomstuff.references.ToolTips;
+import io.github.penguinsfan77.randomstuff.utilities.LogHelper;
 import io.github.penguinsfan77.randomstuff.utilities.NBTHelper;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
@@ -193,7 +194,7 @@ public class ModItemWeapon extends ItemSword {
 			stack = new ItemStack(this);
 		}
 		
-		RandomStuff.itemVaraities += list.size();
+		LogHelper.info(list.size() + " different weapons!");
 		
 	}
 

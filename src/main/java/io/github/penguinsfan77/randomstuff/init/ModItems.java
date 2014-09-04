@@ -9,7 +9,6 @@ import io.github.penguinsfan77.randomstuff.items.weapons.*;
 import io.github.penguinsfan77.randomstuff.references.Reference;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-//TODO: add colored varieties of all tools
 @GameRegistry.ObjectHolder(Reference.MOD_ID)
 public class ModItems {
 	

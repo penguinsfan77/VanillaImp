@@ -5,6 +5,7 @@ public class Names {
 	public static final class Blocks {
 		
 		public static final String CRACKED_STONE = "cracked_stone";
+		public static final String COLORED_PLANKS = "colored_planks";
 		
 	}
 	

@@ -209,7 +209,7 @@ public class ModItemTool extends ItemTool {
 			}
 		}
 		
-		RandomStuff.itemVaraities += list.size();
+		LogHelper.info(list.size() + " different tools!");
 		
 	}
 	

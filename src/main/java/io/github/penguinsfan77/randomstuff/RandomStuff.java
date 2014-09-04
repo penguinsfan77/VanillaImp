@@ -12,7 +12,8 @@ import io.github.penguinsfan77.randomstuff.init.ModOreDictionary;
 import io.github.penguinsfan77.randomstuff.proxy.IProxy;
 import io.github.penguinsfan77.randomstuff.references.Reference;
 import io.github.penguinsfan77.randomstuff.utilities.LogHelper;
-import net.minecraftforge.common.MinecraftForge;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.RecipeSorter;
 import net.minecraftforge.oredict.RecipeSorter.Category;
 import cpw.mods.fml.common.FMLCommonHandler;
@@ -73,6 +74,9 @@ public class RandomStuff {
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event) {
     	
+    	for (ItemStack item: OreDictionary.getOres("stickWood")) {
+    		OreDictionary.registerOre("stick", item);
+    	}
         LogHelper.info(Reference.MOD_NAME + " has been initialized!");
         
     }

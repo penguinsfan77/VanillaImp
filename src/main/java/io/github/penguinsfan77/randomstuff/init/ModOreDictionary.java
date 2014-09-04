@@ -14,6 +14,8 @@ public class ModOreDictionary {
 		OreDictionary.registerOre("stickGold", new ItemStack(ModItems.stick, 1, 17));
 		OreDictionary.registerOre("stickIron", new ItemStack(ModItems.stick, 1, 18));
 		OreDictionary.registerOre("stickDiamond", new ItemStack(ModItems.stick, 1, 19));
+		OreDictionary.registerOre("stick", new ItemStack(ModItems.stick, 1, OreDictionary.WILDCARD_VALUE));
+		OreDictionary.registerOre("plankWood", new ItemStack(ModBlocks.colored_planks, 1, OreDictionary.WILDCARD_VALUE));
 		
 	}
 

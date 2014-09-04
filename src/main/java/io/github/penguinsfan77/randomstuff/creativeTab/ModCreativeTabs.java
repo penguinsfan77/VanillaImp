@@ -13,7 +13,7 @@ public class ModCreativeTabs {
 		@Override
 		public Item getTabIconItem() {
 			
-			return Item.getItemFromBlock(ModBlocks.crackedStone);
+			return Item.getItemFromBlock(ModBlocks.cracked_stone);
 			
 		}
 		

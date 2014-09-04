@@ -4,12 +4,15 @@ import io.github.penguinsfan77.randomstuff.items.ModItemMaterials;
 import io.github.penguinsfan77.randomstuff.items.weapons.Trident;
 import io.github.penguinsfan77.randomstuff.references.Colors;
 import io.github.penguinsfan77.randomstuff.references.NBTTags;
-import io.github.penguinsfan77.randomstuff.utilities.MaterialHelper;
+import io.github.penguinsfan77.randomstuff.utilities.LogHelper;
+import io.github.penguinsfan77.randomstuff.utilities.ItemHelper;
 import io.github.penguinsfan77.randomstuff.utilities.NBTHelper;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 
 import net.minecraft.block.Block;
 import net.minecraft.init.Items;
@@ -20,93 +23,114 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.item.ItemTool;
 import net.minecraft.item.crafting.IRecipe;
+import net.minecraft.item.crafting.ShapelessRecipes;
+import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
+import net.minecraftforge.oredict.OreDictionary;
 
 public class ReColoredItemsRecipe implements IRecipe {
 	
-	/** Is the ItemStack that you get when craft the recipe. */
-    private final ItemStack recipeOutput;
-    /** Is a List of ItemStack that composes the recipe. */
-    public final List recipeItems;
+	private ItemStack output = null;
+    private ArrayList<Object> input = new ArrayList<Object>();
 
-    public ReColoredItemsRecipe(ItemStack output, Object ... params) {
-    	
-    	ArrayList arraylist = new ArrayList();
-        Object[] aobject = params;
-        int i = params.length;
-
-        for (int j = 0; j < i; ++j)
+    public ReColoredItemsRecipe(Block result, Object... recipe){ this(new ItemStack(result), recipe); }
+    public ReColoredItemsRecipe(Item  result, Object... recipe){ this(new ItemStack(result), recipe); }
+    public ReColoredItemsRecipe(ItemStack result, Object... recipe)
+    {
+        output = result.copy();
+        for (Object in : recipe)
         {
-            Object object1 = aobject[j];
-
-            if (object1 instanceof ItemStack)
+            if (in instanceof ItemStack)
             {
-                arraylist.add(((ItemStack)object1).copy());
+                input.add(((ItemStack)in).copy());
             }
-            else if (object1 instanceof Item)
+            else if (in instanceof Item)
             {
-                arraylist.add(new ItemStack((Item)object1));
+                input.add(new ItemStack((Item)in));
+            }
+            else if (in instanceof Block)
+            {
+                input.add(new ItemStack((Block)in));
+            }
+            else if (in instanceof String)
+            {
+                input.add(OreDictionary.getOres((String)in));
             }
             else
             {
-                if (!(object1 instanceof Block))
+                String ret = "Invalid shapeless ore recipe: ";
+                for (Object tmp :  recipe)
                 {
-                    throw new RuntimeException("Invalid shapeless recipy!");
+                    ret += tmp + ", ";
                 }
-
-                arraylist.add(new ItemStack((Block)object1));
+                ret += output;
+                throw new RuntimeException(ret);
             }
         }
-    	
-        this.recipeOutput = output;
-        this.recipeItems = arraylist;
-        
     }
 
-    public ItemStack getRecipeOutput() {
-        return this.recipeOutput;
-    }
+    /**
+     * Returns the size of the recipe area
+     */
+    @Override
+    public int getRecipeSize(){ return input.size(); }
+
+    @Override
+    public ItemStack getRecipeOutput(){ return output; }
 
     /**
      * Used to check if a recipe matches current crafting inventory
      */
-    public boolean matches(InventoryCrafting grid, World world) {
-    	
-        ArrayList arraylist = new ArrayList(this.recipeItems);
+    @SuppressWarnings("unchecked")
+    @Override
+    public boolean matches(InventoryCrafting var1, World world)
+    {
+        ArrayList<Object> required = new ArrayList<Object>(input);
 
-        for (int i = 0; i < 3; ++i)
+        for (int x = 0; x < var1.getSizeInventory(); x++)
         {
-            for (int j = 0; j < 3; ++j)
+            ItemStack slot = var1.getStackInSlot(x);
+
+            if (slot != null)
             {
-                ItemStack itemstack = grid.getStackInRowAndColumn(j, i);
+                boolean inRecipe = false;
+                Iterator<Object> req = required.iterator();
 
-                if (itemstack != null)
+                while (req.hasNext())
                 {
-                    boolean flag = false;
-                    Iterator iterator = arraylist.iterator();
+                    boolean match = false;
 
-                    while (iterator.hasNext())
+                    Object next = req.next();
+
+                    if (next instanceof ItemStack)
                     {
-                        ItemStack itemstack1 = (ItemStack)iterator.next();
-
-                        if (itemstack.getItem() == itemstack1.getItem() && (itemstack1.getItemDamage() == 32767 || itemstack.getItemDamage() == itemstack1.getItemDamage()))
+                        match = OreDictionary.itemMatches((ItemStack)next, slot, false);
+                    }
+                    else if (next instanceof ArrayList)
+                    {
+                        Iterator<ItemStack> itr = ((ArrayList<ItemStack>)next).iterator();
+                        while (itr.hasNext() && !match)
                         {
-                            flag = true;
-                            arraylist.remove(itemstack1);
-                            break;
+                            match = OreDictionary.itemMatches(itr.next(), slot, false);
                         }
                     }
 
-                    if (!flag)
+                    if (match)
                     {
-                        return false;
+                        inRecipe = true;
+                        required.remove(next);
+                        break;
                     }
+                }
+
+                if (!inRecipe)
+                {
+                    return false;
                 }
             }
         }
 
-        return arraylist.isEmpty();
-        
+        return required.isEmpty();
     }
 
     /**
@@ -114,52 +138,87 @@ public class ReColoredItemsRecipe implements IRecipe {
      */
     public ItemStack getCraftingResult(InventoryCrafting grid) {
 
-    	ItemStack itemstack = this.recipeOutput.copy();
+    	ItemStack itemstack = this.output.copy();
     	ItemStack dye = null;
+    	int dyeRow = 0;
     	ItemStack tool = null;
 
     	for (int i = 0; i < grid.getSizeInventory(); ++i) {
     		ItemStack item = grid.getStackInSlot(i);
     		if (item != null && item.getItem().equals(Items.dye)) {
     			dye = item;
+    			if (i <= 2) dyeRow = 0;
+    			else if (i <= 5) dyeRow = 1;
+    			else dyeRow = 2;
     		} else if (item != null && (item.getItem() instanceof ItemTool || item.getItem() instanceof ItemSword)) {
+    			if (i != 4) return null;
     			tool = item;
     		}
     	}
 
-    	//TODO: fix for new recoloring
     	if (dye != null && tool != null) {
     		ItemTool toolItem = null;
     		ItemSword toolSword = null;
     		if (tool.getItem() instanceof ItemTool) toolItem = (ItemTool) tool.getItem();
     		if (tool.getItem() instanceof ItemSword) toolSword = (ItemSword) tool.getItem();
     		itemstack.setItemDamage(tool.getItemDamage());
-    		if (NBTHelper.hasTag(tool, NBTTags.HANDLE) && (NBTHelper.getString(tool, NBTTags.HANDLE).equalsIgnoreCase(NBTTags.Values.COLORED) || NBTHelper.getString(tool, NBTTags.HANDLE).equalsIgnoreCase(NBTTags.Values.WOOD))) {
-    			NBTHelper.setString(itemstack, NBTTags.HANDLE_COLOR, Colors.fromNumber[dye.getItemDamage()]);
-    			NBTHelper.setString(itemstack, NBTTags.HANDLE, NBTTags.Values.COLORED);
+    		NBTTagCompound nbtCopy = (NBTTagCompound) NBTHelper.getRenderTags(tool).copy();
+    		NBTHelper.setRenderTags(itemstack, nbtCopy);
+    		if (dyeRow == 2) {
+    			if (NBTHelper.hasRenderTag(tool, NBTTags.HANDLE) && (NBTHelper.getRenderString(tool, NBTTags.HANDLE).equalsIgnoreCase(NBTTags.Values.COLORED) || NBTHelper.getRenderString(tool, NBTTags.HANDLE).equalsIgnoreCase(NBTTags.Values.WOOD))) {
+    				NBTHelper.setRenderString(itemstack, NBTTags.HANDLE_COLOR, Colors.fromNumber[dye.getItemDamage()]);
+    				NBTHelper.setRenderString(itemstack, NBTTags.HANDLE, NBTTags.Values.COLORED);
+    				return itemstack;
+    			} else {
+    				return null;
+    			}
     		}
-    		if (tool.getItem() instanceof Trident) {
+    		if (tool.getItem() instanceof Trident && dyeRow == 1) {
     			Trident trident = (Trident) tool.getItem();
     			if (trident.HeadMaterial.equals(ToolMaterial.WOOD) || trident.HeadMaterial.equals(ModItemMaterials.COLORED)) {
-    				NBTHelper.setString(itemstack, NBTTags.HEAD_COLOR, Colors.fromNumber[dye.getItemDamage()]);
+    				itemstack = new ItemStack(ItemHelper.getColoredTridentHeadVersion((Trident) tool.getItem()), 1, tool.getItemDamage());
+    				NBTHelper.setRenderTags(itemstack, nbtCopy);
+    				NBTHelper.setRenderString(itemstack, NBTTags.HEAD_COLOR, Colors.fromNumber[dye.getItemDamage()]);
+    				return itemstack;
+    			} else {
+    				return null;
     			}
     		}
     		if (toolItem != null) {
-    			if (MaterialHelper.getToolMaterial(toolItem.getToolMaterialName()).equals(ToolMaterial.WOOD) || MaterialHelper.getToolMaterial(toolItem.getToolMaterialName()).equals(ModItemMaterials.COLORED)) {
-    				NBTHelper.setString(itemstack, NBTTags.BASE_COLOR, Colors.fromNumber[dye.getItemDamage()]);
+    			if (dyeRow == 0) {
+    				if (ItemHelper.getToolMaterial(toolItem.getToolMaterialName()).equals(ToolMaterial.WOOD) || ItemHelper.getToolMaterial(toolItem.getToolMaterialName()).equals(ModItemMaterials.COLORED)) {
+    					itemstack = new ItemStack(ItemHelper.getColoredVersion(tool.getItem()), 1, tool.getItemDamage());
+    					NBTHelper.setRenderTags(itemstack, nbtCopy);
+    					NBTHelper.setRenderString(itemstack, NBTTags.BASE_COLOR, Colors.fromNumber[dye.getItemDamage()]);
+    					return itemstack;
+    				} else {
+    					return null;
+    				}
+    			} else if (dyeRow == 1) {
+    				if (NBTHelper.hasRenderTag(tool, NBTTags.HANDLE) && (NBTHelper.getRenderString(tool, NBTTags.HANDLE).equalsIgnoreCase(NBTTags.Values.COLORED) || NBTHelper.getRenderString(tool, NBTTags.HANDLE).equalsIgnoreCase(NBTTags.Values.WOOD))) {
+        				NBTHelper.setRenderString(itemstack, NBTTags.HANDLE_COLOR, Colors.fromNumber[dye.getItemDamage()]);
+        				NBTHelper.setRenderString(itemstack, NBTTags.HANDLE, NBTTags.Values.COLORED);
+        				return itemstack;
+        			} else {
+        				return null;
+        			}
+    			}
+    		} else if (toolSword != null) {
+    			if (dyeRow <= 1) {
+    				if (ItemHelper.getToolMaterial(toolSword.getToolMaterialName()).equals(ToolMaterial.WOOD) || ItemHelper.getToolMaterial(toolSword.getToolMaterialName()).equals(ModItemMaterials.COLORED)) {
+    					itemstack = new ItemStack(ItemHelper.getColoredVersion(tool.getItem()), 1, tool.getItemDamage());
+    					NBTHelper.setRenderTags(itemstack, nbtCopy);
+    					NBTHelper.setRenderString(itemstack, NBTTags.BASE_COLOR, Colors.fromNumber[dye.getItemDamage()]);
+    					return itemstack;
+    				} else {
+    					return null;
+    				}
     			}
     		}
     	}
 
     	return itemstack;
 
-    }
-
-    /**
-     * Returns the size of the recipe area
-     */
-    public int getRecipeSize() {
-        return this.recipeItems.size();
     }
 
 }

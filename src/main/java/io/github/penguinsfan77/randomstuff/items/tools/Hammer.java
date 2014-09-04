@@ -59,7 +59,7 @@ public class Hammer extends ModItemTool {
 		boolean sucsess = false;
 		
 		if (world.getBlock(x, y, z).equals(Blocks.stone)) {
-			world.setBlock(x, y, z, ModBlocks.crackedStone);
+			world.setBlock(x, y, z, ModBlocks.cracked_stone);
 			sucsess = true;
 		} else if (world.getBlock(x, y, z).equals(Blocks.stonebrick)) {
 			world.setBlock(x, y, z, Blocks.stonebrick, 2, 3);

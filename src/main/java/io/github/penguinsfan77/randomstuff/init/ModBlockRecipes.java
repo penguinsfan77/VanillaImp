@@ -21,20 +21,20 @@ public class ModBlockRecipes {
 		//Cracked stone
 		ModItemTool[] hammers = {ModItems.diamond_hammer, ModItems.iron_hammer, ModItems.gold_hammer, ModItems.stone_hammer, ModItems.wood_hammer};
 		for (ModItemTool hammer: hammers) {
-			recipes.add(new ShapelessOreRecipe(new ItemStack(ModBlocks.crackedStone), new ItemStack(hammer, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.stone)));
-			recipes.add(new ShapelessOreRecipe(new ItemStack(ModBlocks.crackedStone, 2), new ItemStack(hammer, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.stone),
+			recipes.add(new ShapelessOreRecipe(new ItemStack(ModBlocks.cracked_stone), new ItemStack(hammer, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.stone)));
+			recipes.add(new ShapelessOreRecipe(new ItemStack(ModBlocks.cracked_stone, 2), new ItemStack(hammer, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.stone),
 					new ItemStack(Blocks.stone)));
-			recipes.add(new ShapelessOreRecipe(new ItemStack(ModBlocks.crackedStone, 3), new ItemStack(hammer, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.stone),
+			recipes.add(new ShapelessOreRecipe(new ItemStack(ModBlocks.cracked_stone, 3), new ItemStack(hammer, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.stone),
 					new ItemStack(Blocks.stone), new ItemStack(Blocks.stone)));
-			recipes.add(new ShapelessOreRecipe(new ItemStack(ModBlocks.crackedStone, 4), new ItemStack(hammer, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.stone),
+			recipes.add(new ShapelessOreRecipe(new ItemStack(ModBlocks.cracked_stone, 4), new ItemStack(hammer, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.stone),
 					new ItemStack(Blocks.stone), new ItemStack(Blocks.stone), new ItemStack(Blocks.stone)));
-			recipes.add(new ShapelessOreRecipe(new ItemStack(ModBlocks.crackedStone, 5), new ItemStack(hammer, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.stone),
+			recipes.add(new ShapelessOreRecipe(new ItemStack(ModBlocks.cracked_stone, 5), new ItemStack(hammer, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.stone),
 					new ItemStack(Blocks.stone), new ItemStack(Blocks.stone), new ItemStack(Blocks.stone), new ItemStack(Blocks.stone)));
-			recipes.add(new ShapelessOreRecipe(new ItemStack(ModBlocks.crackedStone, 6), new ItemStack(hammer, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.stone),
+			recipes.add(new ShapelessOreRecipe(new ItemStack(ModBlocks.cracked_stone, 6), new ItemStack(hammer, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.stone),
 					new ItemStack(Blocks.stone), new ItemStack(Blocks.stone), new ItemStack(Blocks.stone), new ItemStack(Blocks.stone), new ItemStack(Blocks.stone)));
-			recipes.add(new ShapelessOreRecipe(new ItemStack(ModBlocks.crackedStone, 7), new ItemStack(hammer, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.stone),
+			recipes.add(new ShapelessOreRecipe(new ItemStack(ModBlocks.cracked_stone, 7), new ItemStack(hammer, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.stone),
 					new ItemStack(Blocks.stone), new ItemStack(Blocks.stone), new ItemStack(Blocks.stone), new ItemStack(Blocks.stone), new ItemStack(Blocks.stone), new ItemStack(Blocks.stone)));
-			recipes.add(new ShapelessOreRecipe(new ItemStack(ModBlocks.crackedStone, 8), new ItemStack(hammer, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.stone),
+			recipes.add(new ShapelessOreRecipe(new ItemStack(ModBlocks.cracked_stone, 8), new ItemStack(hammer, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.stone),
 					new ItemStack(Blocks.stone), new ItemStack(Blocks.stone), new ItemStack(Blocks.stone), new ItemStack(Blocks.stone), new ItemStack(Blocks.stone), new ItemStack(Blocks.stone), new ItemStack(Blocks.stone)));
 		}
 		

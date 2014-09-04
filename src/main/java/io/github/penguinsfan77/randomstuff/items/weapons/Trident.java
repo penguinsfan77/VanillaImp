@@ -5,6 +5,7 @@ import io.github.penguinsfan77.randomstuff.items.ModItemMaterials;
 import io.github.penguinsfan77.randomstuff.references.Colors;
 import io.github.penguinsfan77.randomstuff.references.NBTTags;
 import io.github.penguinsfan77.randomstuff.references.Textures;
+import io.github.penguinsfan77.randomstuff.utilities.LogHelper;
 import io.github.penguinsfan77.randomstuff.utilities.NBTHelper;
 
 import java.util.HashMap;
@@ -65,8 +66,8 @@ public class Trident extends ModItemWeapon {
 	public int getColorFromItemStack(ItemStack item, int renderPass) {
 		
 		if (renderPass == 2 && HeadMaterial.equals(ModItemMaterials.COLORED)) {
-			if (NBTHelper.hasTag(item, NBTTags.HEAD_COLOR)) {
-				return Integer.parseInt(NBTHelper.getString(item, NBTTags.HEAD_COLOR), 16);
+			if (NBTHelper.hasRenderTag(item, NBTTags.HEAD_COLOR)) {
+				return Integer.parseInt(NBTHelper.getRenderString(item, NBTTags.HEAD_COLOR), 16);
 			}
 		}
 		return super.getColorFromItemStack(item, renderPass);
@@ -224,7 +225,7 @@ public class Trident extends ModItemWeapon {
 			stack = new ItemStack(this);
 		}
 		
-		RandomStuff.itemVaraities += list.size();
+		LogHelper.info(list.size() + " different tridents!");
 
 	}
 

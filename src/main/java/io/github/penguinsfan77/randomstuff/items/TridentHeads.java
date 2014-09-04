@@ -19,7 +19,6 @@ import net.minecraft.util.IIcon;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-//TODO: make textures
 public class TridentHeads extends ModItem {
 	
 	private HashMap icons = new HashMap<Integer, IIcon>();
