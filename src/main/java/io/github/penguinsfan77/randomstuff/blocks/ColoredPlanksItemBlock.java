@@ -20,7 +20,6 @@ public class ColoredPlanksItemBlock extends ItemBlock {
 		
 		super(block);
 		this.block = block;
-		this.setUnlocalizedName(Names.Blocks.COLORED_PLANKS);
 		this.setHasSubtypes(true);
 
 	}
@@ -35,7 +34,7 @@ public class ColoredPlanksItemBlock extends ItemBlock {
 	@Override
     public String getUnlocalizedName(ItemStack itemStack) {
     	
-        return String.format("item.%s%s.%s", Textures.PREFIX, Names.Blocks.COLORED_PLANKS, Names.Colors.COLOR[itemStack.getItemDamage()]);
+        return String.format("tile.%s%s.%s", Textures.PREFIX, Names.Blocks.COLORED_PLANKS, Names.Colors.COLOR[itemStack.getItemDamage()]);
    
     }
 	

@@ -16,7 +16,7 @@ public class ColoredPlanks extends ModBlock {
 		
 		super();
 		this.setBlockName(Names.Blocks.COLORED_PLANKS);
-		this.setBlockTextureName(Names.Blocks.COLORED_PLANKS);
+		//this.setBlockTextureName(Names.Blocks.COLORED_PLANKS);
 		
 		this.setHardness(2.0F).setResistance(5.0F).setStepSound(soundTypeWood);
 		

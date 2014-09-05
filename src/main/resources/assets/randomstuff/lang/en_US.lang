@@ -127,6 +127,22 @@ item.randomstuff:trident_head.diamond.name=Diamond Trident Head
 ## Blocks ##
 ############
 tile.randomstuff:cracked_stone.name=Cracked Stone
+tile.randomstuff:colored_planks.white.name=White Planks
+tile.randomstuff:colored_planks.orange.name=Orange Planks
+tile.randomstuff:colored_planks.magenta.name=Magenta Planks
+tile.randomstuff:colored_planks.light_blue.name=Light Blue Planks
+tile.randomstuff:colored_planks.yellow.name=Yellow Planks
+tile.randomstuff:colored_planks.lime.name=Lime Planks
+tile.randomstuff:colored_planks.pink.name=Pink Planks
+tile.randomstuff:colored_planks.gray.name=Gray Planks
+tile.randomstuff:colored_planks.light_gray.name=Light Gray Planks
+tile.randomstuff:colored_planks.cyan.name=Cyan Planks
+tile.randomstuff:colored_planks.purple.name=Purple Planks
+tile.randomstuff:colored_planks.blue.name=Blue Planks
+tile.randomstuff:colored_planks.brown.name=Brown Planks
+tile.randomstuff:colored_planks.green.name=Green Planks
+tile.randomstuff:colored_planks.red.name=Red Planks
+tile.randomstuff:colored_planks.black.name=Black Planks
 
 ##################
 ## Creative Tabs ##
@@ -140,6 +156,8 @@ itemGroup.randomstuffweapons=Random Stuff Weapons
 ####################
 tooltip.name.handleColor=Handle Color
 tooltip.name.handleType=Handle Type
+tooltip.name.baseColor=Color
+tooltip.name.headColor=Head Color
 tooltip.value.color.white=White
 tooltip.value.color.orange=Orange
 tooltip.value.color.magenta=Magenta

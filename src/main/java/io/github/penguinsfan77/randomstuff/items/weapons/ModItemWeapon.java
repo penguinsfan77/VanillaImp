@@ -112,11 +112,18 @@ public class ModItemWeapon extends ItemSword {
 	@Override
 	public void addInformation(ItemStack item, EntityPlayer player, List list, boolean bool) {
 
+		if (material.equals(ModItemMaterials.COLORED)) {
+			if (NBTHelper.hasRenderTag(item, NBTTags.BASE_COLOR)) {
+				list.add(StatCollector.translateToLocal(ToolTips.BASE) + ": " + StatCollector.translateToLocal((String) ToolTips.Values.COLORS.get(NBTHelper.getRenderString(item, NBTTags.BASE_COLOR))));
+			} else {
+				list.add(StatCollector.translateToLocal(ToolTips.BASE) + ": " + StatCollector.translateToLocal((String) ToolTips.Values.COLORS.get(Colors.WHITE)));
+			}
+		}
 		if (NBTHelper.hasRenderTag(item, NBTTags.HANDLE)) {
 			if (NBTHelper.getRenderString(item, NBTTags.HANDLE).equalsIgnoreCase(NBTTags.Values.COLORED)) {
 				list.add(StatCollector.translateToLocal(ToolTips.COLOR) + ": " + StatCollector.translateToLocal((String) ToolTips.Values.COLORS.get(NBTHelper.getRenderString(item, NBTTags.HANDLE_COLOR))));
 			} else {
-				list.add(StatCollector.translateToLocal(ToolTips.HANDLE) + ": " + StatCollector.translateToLocal((String) ToolTips.Values.HANDLES.get(NBTHelper.getRenderString(item, NBTTags.HANDLE))));
+				list.add(StatCollector.translateToLocal(ToolTips.HANDLE) + ": " + StatCollector.translateToLocal((String) ToolTips.Values.TYPES.get(NBTHelper.getRenderString(item, NBTTags.HANDLE))));
 			}
 		}
 		super.addInformation(item, player, list, bool);

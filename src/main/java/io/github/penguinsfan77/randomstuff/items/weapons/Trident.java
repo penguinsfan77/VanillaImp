@@ -5,6 +5,7 @@ import io.github.penguinsfan77.randomstuff.items.ModItemMaterials;
 import io.github.penguinsfan77.randomstuff.references.Colors;
 import io.github.penguinsfan77.randomstuff.references.NBTTags;
 import io.github.penguinsfan77.randomstuff.references.Textures;
+import io.github.penguinsfan77.randomstuff.references.ToolTips;
 import io.github.penguinsfan77.randomstuff.utilities.LogHelper;
 import io.github.penguinsfan77.randomstuff.utilities.NBTHelper;
 
@@ -15,9 +16,11 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
+import net.minecraft.util.StatCollector;
 
 
 public class Trident extends ModItemWeapon {
@@ -79,6 +82,19 @@ public class Trident extends ModItemWeapon {
 
 		return 3;
 		
+	}
+	
+	@Override
+	public void addInformation(ItemStack item, EntityPlayer player, List list, boolean bool) {
+		
+		super.addInformation(item, player, list, bool);
+		if (HeadMaterial.equals(ModItemMaterials.COLORED)) {
+			if (NBTHelper.hasRenderTag(item, NBTTags.HEAD_COLOR)) {
+				list.add(StatCollector.translateToLocal(ToolTips.HEAD) + ": " + StatCollector.translateToLocal((String) ToolTips.Values.COLORS.get(NBTHelper.getRenderString(item, NBTTags.HEAD_COLOR))));
+			} else {
+				list.add(StatCollector.translateToLocal(ToolTips.BASE) + ": " + StatCollector.translateToLocal((String) ToolTips.Values.COLORS.get(Colors.WHITE)));
+			}
+		}
 	}
 	
 	@Override
