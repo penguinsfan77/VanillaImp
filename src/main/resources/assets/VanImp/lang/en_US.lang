@@ -1,0 +1,187 @@
+###########
+## Items ##
+###########
+item.VanImp:wood_wood_trident.name=Wood Trident
+item.VanImp:wood_stone_trident.name=Stone Tipped Wood Trident
+item.VanImp:wood_gold_trident.name=Gold Tipped Wood Trident
+item.VanImp:wood_iron_trident.name=Iron Tipped Wood Trident
+item.VanImp:wood_emerald_trident.name=Diamond Tipped Wood Trident
+item.VanImp:wood_colored_trident.name=Colored Tipped Wood Trident
+item.VanImp:stone_wood_trident.name=Wood Tipped Stone Trident
+item.VanImp:stone_stone_trident.name=Stone Trident
+item.VanImp:stone_gold_trident.name=Gold Tipped Stone Trident
+item.VanImp:stone_iron_trident.name=Iron Tipped Stone Trident
+item.VanImp:stone_emerald_trident.name=Diamond Tipped Stone Trident
+item.VanImp:stone_colored_trident.name=Colored Tipped Stone Trident
+item.VanImp:gold_wood_trident.name=Wood Tipped Gold Trident
+item.VanImp:gold_stone_trident.name=Stone Tipped Gold Trident
+item.VanImp:gold_gold_trident.name=Gold Trident
+item.VanImp:gold_iron_trident.name=Iron Tipped Gold Trident
+item.VanImp:gold_emerald_trident.name=Diamond Tipped Gold Trident
+item.VanImp:gold_colored_trident.name=Colored Tipped Gold Trident
+item.VanImp:iron_wood_trident.name=Wood Tipped Iron Trident
+item.VanImp:iron_stone_trident.name=Stone Tipped Iron Trident
+item.VanImp:iron_gold_trident.name=Gold Tipped Iron Trident
+item.VanImp:iron_iron_trident.name=Iron Trident
+item.VanImp:iron_emerald_trident.name=Diamond Tipped Iron Trident
+item.VanImp:iron_colored_trident.name=Colored Tipped Iron Trident
+item.VanImp:emerald_wood_trident.name=Wood Tipped Diamond Trident
+item.VanImp:emerald_stone_trident.name=Stone Tipped Diamond Trident
+item.VanImp:emerald_gold_trident.name=Gold Tipped Diamond Trident
+item.VanImp:emerald_iron_trident.name=Iron Tipped Diamond Trident
+item.VanImp:emerald_emerald_trident.name=Diamond Trident
+item.VanImp:emerald_colored_trident.name=Colored Tipped Diamond Trident
+item.VanImp:colored_wood_trident.name=Wood Tipped Colored Trident
+item.VanImp:colored_stone_trident.name=Stone Tipped Colored Trident
+item.VanImp:colored_gold_trident.name=Gold Tipped Colored Trident
+item.VanImp:colored_iron_trident.name=Iron Tipped Colored Trident
+item.VanImp:colored_emerald_trident.name=Diamond Tipped Colored Trident
+item.VanImp:colored_colored_trident.name=Colored Trident
+
+item.VanImp:wood_sword.name=Wooden Sword
+item.VanImp:gold_sword.name=Golden Sword
+item.VanImp:stone_sword.name=Stone Sword
+item.VanImp:iron_sword.name=Iron Sword
+item.VanImp:emerald_sword.name=Diamond Sword
+item.VanImp:colored_sword.name=Colored Sword
+
+item.VanImp:wood_pickaxe.name=Wooden Pickaxe
+item.VanImp:gold_pickaxe.name=Golden Pickaxe
+item.VanImp:stone_pickaxe.name=Stone Pickaxe
+item.VanImp:iron_pickaxe.name=Iron Pickaxe
+item.VanImp:emerald_pickaxe.name=Diamond Pickaxe
+item.VanImp:colored_pickaxe.name=Colored Pickaxe
+
+item.VanImp:wood_shovel.name=Wooden Shovel
+item.VanImp:gold_shovel.name=Golden Shovel
+item.VanImp:stone_shovel.name=Stone Shovel
+item.VanImp:iron_shovel.name=Iron Shovel
+item.VanImp:emerald_shovel.name=Diamond Shovel
+item.VanImp:colored_shovel.name=Colored Shovel
+
+item.VanImp:wood_axe.name=Wooden Axe
+item.VanImp:gold_axe.name=Golden Axe
+item.VanImp:stone_axe.name=Stone Axe
+item.VanImp:iron_axe.name=Iron Axe
+item.VanImp:emerald_axe.name=Diamond Axe
+item.VanImp:colored_axe.name=Colored Axe
+
+item.VanImp:wood_hoe.name=Wooden Hoe
+item.VanImp:gold_hoe.name=Golden Hoe
+item.VanImp:stone_hoe.name=Stone Hoe
+item.VanImp:iron_hoe.name=Iron Hoe
+item.VanImp:emerald_hoe.name=Diamond Hoe
+item.VanImp:colored_hoe.name=Colored Hoe
+
+item.VanImp:wood_hammer.name=Wooden Hammer
+item.VanImp:gold_hammer.name=Golden Hammer
+item.VanImp:stone_hammer.name=Stone Hammer
+item.VanImp:iron_hammer.name=Iron Hammer
+item.VanImp:emerald_hammer.name=Diamond Hammer
+item.VanImp:colored_hammer.name=Colored Hammer
+
+item.VanImp:stick.white.name=White Stick
+item.VanImp:stick.orange.name=Orange Stick
+item.VanImp:stick.magenta.name=Magenta Stick
+item.VanImp:stick.light_blue.name=Light Blue Stick
+item.VanImp:stick.yellow.name=Yellow Stick
+item.VanImp:stick.lime.name=Lime Stick
+item.VanImp:stick.pink.name=Pink Stick
+item.VanImp:stick.gray.name=Gray Stick
+item.VanImp:stick.light_gray.name=Light Gray Stick
+item.VanImp:stick.cyan.name=Cyan Stick
+item.VanImp:stick.purple.name=Purple Stick
+item.VanImp:stick.blue.name=Blue Stick
+item.VanImp:stick.brown.name=Brown Stick
+item.VanImp:stick.green.name=Green Stick
+item.VanImp:stick.red.name=Red Stick
+item.VanImp:stick.black.name=Black Stick
+item.VanImp:stick.stone.name=Stone Stick
+item.VanImp:stick.iron.name=Iron Stick
+item.VanImp:stick.gold.name=Gold Stick
+item.VanImp:stick.diamond.name=Diamond Stick
+
+item.VanImp:trident_head.white.name=White Trident Head
+item.VanImp:trident_head.orange.name=Orange Trident Head
+item.VanImp:trident_head.magenta.name=Magenta Trident Head
+item.VanImp:trident_head.light_blue.name=Light Blue Trident Head
+item.VanImp:trident_head.yellow.name=Yellow Trident Head
+item.VanImp:trident_head.lime.name=Lime Trident Head
+item.VanImp:trident_head.pink.name=Pink Trident Head
+item.VanImp:trident_head.gray.name=Gray Trident Head
+item.VanImp:trident_head.light_gray.name=Light Gray Trident Head
+item.VanImp:trident_head.cyan.name=Cyan Trident Head
+item.VanImp:trident_head.purple.name=Purple Trident Head
+item.VanImp:trident_head.blue.name=Blue Trident Head
+item.VanImp:trident_head.brown.name=Brown Trident Head
+item.VanImp:trident_head.green.name=Green Trident Head
+item.VanImp:trident_head.red.name=Red Trident Head
+item.VanImp:trident_head.black.name=Black Trident Head
+item.VanImp:trident_head.wood.name=Wood Trident Head
+item.VanImp:trident_head.stone.name=Stone Trident Head
+item.VanImp:trident_head.iron.name=Iron Trident Head
+item.VanImp:trident_head.gold.name=Gold Trident Head
+item.VanImp:trident_head.diamond.name=Diamond Trident Head
+
+############
+## Blocks ##
+############
+tile.VanImp:cracked_stone.name=Cracked Stone
+tile.VanImp:colored_planks.white.name=White Planks
+tile.VanImp:colored_planks.orange.name=Orange Planks
+tile.VanImp:colored_planks.magenta.name=Magenta Planks
+tile.VanImp:colored_planks.light_blue.name=Light Blue Planks
+tile.VanImp:colored_planks.yellow.name=Yellow Planks
+tile.VanImp:colored_planks.lime.name=Lime Planks
+tile.VanImp:colored_planks.pink.name=Pink Planks
+tile.VanImp:colored_planks.gray.name=Gray Planks
+tile.VanImp:colored_planks.light_gray.name=Light Gray Planks
+tile.VanImp:colored_planks.cyan.name=Cyan Planks
+tile.VanImp:colored_planks.purple.name=Purple Planks
+tile.VanImp:colored_planks.blue.name=Blue Planks
+tile.VanImp:colored_planks.brown.name=Brown Planks
+tile.VanImp:colored_planks.green.name=Green Planks
+tile.VanImp:colored_planks.red.name=Red Planks
+tile.VanImp:colored_planks.black.name=Black Planks
+
+##################
+## Creative Tabs ##
+##################
+itemGroup.VanImp=Vanilla Imp.
+itemGroup.VanImptools=Vanilla Imp. Tools
+itemGroup.VanImpweapons=Vanilla Imp. Weapons
+
+####################
+## Item Tool Tips ##
+####################
+tooltip.name.handleColor=Handle Color
+tooltip.name.handleType=Handle Type
+tooltip.name.baseColor=Color
+tooltip.name.headColor=Head Color
+tooltip.value.color.white=White
+tooltip.value.color.orange=Orange
+tooltip.value.color.magenta=Magenta
+tooltip.value.color.light_blue=Light Blue
+tooltip.value.color.yellow=Yellow
+tooltip.value.color.lime=Lime
+tooltip.value.color.pink=Pink
+tooltip.value.color.gray=Gray
+tooltip.value.color.light_gray=Light Gray
+tooltip.value.color.cyan=Cyan
+tooltip.value.color.purple=Purple
+tooltip.value.color.blue=Blue
+tooltip.value.color.brown=Brown
+tooltip.value.color.green=Green
+tooltip.value.color.red=Red
+tooltip.value.color.black=Black
+tooltip.value.handle.diamond=Diamond
+tooltip.value.handle.gold=Gold
+tooltip.value.handle.iron=Iron
+tooltip.value.handle.stone=Stone
+tooltip.value.handle.wood=Wood
+
+############
+## Config ##
+############
+gui.config.allTools=All tool varities
+config.desc.allTools=Decides whether or not to show all tool varities in the creative inventory

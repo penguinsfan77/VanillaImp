@@ -1,11 +1,11 @@
 [
 {
-  "modid": "randomstuff",
-  "name": "Random Stuff",
+  "modid": "VanImp",
+  "name": "Vanilla Improvements",
   "description": "A mod for Minecraft that adds all the random shit that comes out of my head!",
-  "version": "0.0.1",
+  "version": "0.1",
   "mcversion": "1.7.10",
-  "url": "",
+  "url": "penguinsfan77.github.io/VanillaImp",
   "updateUrl": "",
   "authorList": [
     "penguinsgan77"
