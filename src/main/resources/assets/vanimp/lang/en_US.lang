@@ -1,0 +1,187 @@
+###########
+## Items ##
+###########
+item.vanimp:wood_wood_trident.name=Wood Trident
+item.vanimp:wood_stone_trident.name=Stone Tipped Wood Trident
+item.vanimp:wood_gold_trident.name=Gold Tipped Wood Trident
+item.vanimp:wood_iron_trident.name=Iron Tipped Wood Trident
+item.vanimp:wood_emerald_trident.name=Diamond Tipped Wood Trident
+item.vanimp:wood_colored_trident.name=Colored Tipped Wood Trident
+item.vanimp:stone_wood_trident.name=Wood Tipped Stone Trident
+item.vanimp:stone_stone_trident.name=Stone Trident
+item.vanimp:stone_gold_trident.name=Gold Tipped Stone Trident
+item.vanimp:stone_iron_trident.name=Iron Tipped Stone Trident
+item.vanimp:stone_emerald_trident.name=Diamond Tipped Stone Trident
+item.vanimp:stone_colored_trident.name=Colored Tipped Stone Trident
+item.vanimp:gold_wood_trident.name=Wood Tipped Gold Trident
+item.vanimp:gold_stone_trident.name=Stone Tipped Gold Trident
+item.vanimp:gold_gold_trident.name=Gold Trident
+item.vanimp:gold_iron_trident.name=Iron Tipped Gold Trident
+item.vanimp:gold_emerald_trident.name=Diamond Tipped Gold Trident
+item.vanimp:gold_colored_trident.name=Colored Tipped Gold Trident
+item.vanimp:iron_wood_trident.name=Wood Tipped Iron Trident
+item.vanimp:iron_stone_trident.name=Stone Tipped Iron Trident
+item.vanimp:iron_gold_trident.name=Gold Tipped Iron Trident
+item.vanimp:iron_iron_trident.name=Iron Trident
+item.vanimp:iron_emerald_trident.name=Diamond Tipped Iron Trident
+item.vanimp:iron_colored_trident.name=Colored Tipped Iron Trident
+item.vanimp:emerald_wood_trident.name=Wood Tipped Diamond Trident
+item.vanimp:emerald_stone_trident.name=Stone Tipped Diamond Trident
+item.vanimp:emerald_gold_trident.name=Gold Tipped Diamond Trident
+item.vanimp:emerald_iron_trident.name=Iron Tipped Diamond Trident
+item.vanimp:emerald_emerald_trident.name=Diamond Trident
+item.vanimp:emerald_colored_trident.name=Colored Tipped Diamond Trident
+item.vanimp:colored_wood_trident.name=Wood Tipped Colored Trident
+item.vanimp:colored_stone_trident.name=Stone Tipped Colored Trident
+item.vanimp:colored_gold_trident.name=Gold Tipped Colored Trident
+item.vanimp:colored_iron_trident.name=Iron Tipped Colored Trident
+item.vanimp:colored_emerald_trident.name=Diamond Tipped Colored Trident
+item.vanimp:colored_colored_trident.name=Colored Trident
+
+item.vanimp:wood_sword.name=Wooden Sword
+item.vanimp:gold_sword.name=Golden Sword
+item.vanimp:stone_sword.name=Stone Sword
+item.vanimp:iron_sword.name=Iron Sword
+item.vanimp:emerald_sword.name=Diamond Sword
+item.vanimp:colored_sword.name=Colored Sword
+
+item.vanimp:wood_pickaxe.name=Wooden Pickaxe
+item.vanimp:gold_pickaxe.name=Golden Pickaxe
+item.vanimp:stone_pickaxe.name=Stone Pickaxe
+item.vanimp:iron_pickaxe.name=Iron Pickaxe
+item.vanimp:emerald_pickaxe.name=Diamond Pickaxe
+item.vanimp:colored_pickaxe.name=Colored Pickaxe
+
+item.vanimp:wood_shovel.name=Wooden Shovel
+item.vanimp:gold_shovel.name=Golden Shovel
+item.vanimp:stone_shovel.name=Stone Shovel
+item.vanimp:iron_shovel.name=Iron Shovel
+item.vanimp:emerald_shovel.name=Diamond Shovel
+item.vanimp:colored_shovel.name=Colored Shovel
+
+item.vanimp:wood_axe.name=Wooden Axe
+item.vanimp:gold_axe.name=Golden Axe
+item.vanimp:stone_axe.name=Stone Axe
+item.vanimp:iron_axe.name=Iron Axe
+item.vanimp:emerald_axe.name=Diamond Axe
+item.vanimp:colored_axe.name=Colored Axe
+
+item.vanimp:wood_hoe.name=Wooden Hoe
+item.vanimp:gold_hoe.name=Golden Hoe
+item.vanimp:stone_hoe.name=Stone Hoe
+item.vanimp:iron_hoe.name=Iron Hoe
+item.vanimp:emerald_hoe.name=Diamond Hoe
+item.vanimp:colored_hoe.name=Colored Hoe
+
+item.vanimp:wood_hammer.name=Wooden Hammer
+item.vanimp:gold_hammer.name=Golden Hammer
+item.vanimp:stone_hammer.name=Stone Hammer
+item.vanimp:iron_hammer.name=Iron Hammer
+item.vanimp:emerald_hammer.name=Diamond Hammer
+item.vanimp:colored_hammer.name=Colored Hammer
+
+item.vanimp:stick.white.name=White Stick
+item.vanimp:stick.orange.name=Orange Stick
+item.vanimp:stick.magenta.name=Magenta Stick
+item.vanimp:stick.light_blue.name=Light Blue Stick
+item.vanimp:stick.yellow.name=Yellow Stick
+item.vanimp:stick.lime.name=Lime Stick
+item.vanimp:stick.pink.name=Pink Stick
+item.vanimp:stick.gray.name=Gray Stick
+item.vanimp:stick.light_gray.name=Light Gray Stick
+item.vanimp:stick.cyan.name=Cyan Stick
+item.vanimp:stick.purple.name=Purple Stick
+item.vanimp:stick.blue.name=Blue Stick
+item.vanimp:stick.brown.name=Brown Stick
+item.vanimp:stick.green.name=Green Stick
+item.vanimp:stick.red.name=Red Stick
+item.vanimp:stick.black.name=Black Stick
+item.vanimp:stick.stone.name=Stone Stick
+item.vanimp:stick.iron.name=Iron Stick
+item.vanimp:stick.gold.name=Gold Stick
+item.vanimp:stick.diamond.name=Diamond Stick
+
+item.vanimp:trident_head.white.name=White Trident Head
+item.vanimp:trident_head.orange.name=Orange Trident Head
+item.vanimp:trident_head.magenta.name=Magenta Trident Head
+item.vanimp:trident_head.light_blue.name=Light Blue Trident Head
+item.vanimp:trident_head.yellow.name=Yellow Trident Head
+item.vanimp:trident_head.lime.name=Lime Trident Head
+item.vanimp:trident_head.pink.name=Pink Trident Head
+item.vanimp:trident_head.gray.name=Gray Trident Head
+item.vanimp:trident_head.light_gray.name=Light Gray Trident Head
+item.vanimp:trident_head.cyan.name=Cyan Trident Head
+item.vanimp:trident_head.purple.name=Purple Trident Head
+item.vanimp:trident_head.blue.name=Blue Trident Head
+item.vanimp:trident_head.brown.name=Brown Trident Head
+item.vanimp:trident_head.green.name=Green Trident Head
+item.vanimp:trident_head.red.name=Red Trident Head
+item.vanimp:trident_head.black.name=Black Trident Head
+item.vanimp:trident_head.wood.name=Wood Trident Head
+item.vanimp:trident_head.stone.name=Stone Trident Head
+item.vanimp:trident_head.iron.name=Iron Trident Head
+item.vanimp:trident_head.gold.name=Gold Trident Head
+item.vanimp:trident_head.diamond.name=Diamond Trident Head
+
+############
+## Blocks ##
+############
+tile.vanimp:cracked_stone.name=Cracked Stone
+tile.vanimp:colored_planks.white.name=White Planks
+tile.vanimp:colored_planks.orange.name=Orange Planks
+tile.vanimp:colored_planks.magenta.name=Magenta Planks
+tile.vanimp:colored_planks.light_blue.name=Light Blue Planks
+tile.vanimp:colored_planks.yellow.name=Yellow Planks
+tile.vanimp:colored_planks.lime.name=Lime Planks
+tile.vanimp:colored_planks.pink.name=Pink Planks
+tile.vanimp:colored_planks.gray.name=Gray Planks
+tile.vanimp:colored_planks.light_gray.name=Light Gray Planks
+tile.vanimp:colored_planks.cyan.name=Cyan Planks
+tile.vanimp:colored_planks.purple.name=Purple Planks
+tile.vanimp:colored_planks.blue.name=Blue Planks
+tile.vanimp:colored_planks.brown.name=Brown Planks
+tile.vanimp:colored_planks.green.name=Green Planks
+tile.vanimp:colored_planks.red.name=Red Planks
+tile.vanimp:colored_planks.black.name=Black Planks
+
+##################
+## Creative Tabs ##
+##################
+itemGroup.vanimp=Vanilla Imp.
+itemGroup.vanimptools=Vanilla Imp. Tools
+itemGroup.vanimpweapons=Vanilla Imp. Weapons
+
+####################
+## Item Tool Tips ##
+####################
+tooltip.name.handleColor=Handle Color
+tooltip.name.handleType=Handle Type
+tooltip.name.baseColor=Color
+tooltip.name.headColor=Head Color
+tooltip.value.color.white=White
+tooltip.value.color.orange=Orange
+tooltip.value.color.magenta=Magenta
+tooltip.value.color.light_blue=Light Blue
+tooltip.value.color.yellow=Yellow
+tooltip.value.color.lime=Lime
+tooltip.value.color.pink=Pink
+tooltip.value.color.gray=Gray
+tooltip.value.color.light_gray=Light Gray
+tooltip.value.color.cyan=Cyan
+tooltip.value.color.purple=Purple
+tooltip.value.color.blue=Blue
+tooltip.value.color.brown=Brown
+tooltip.value.color.green=Green
+tooltip.value.color.red=Red
+tooltip.value.color.black=Black
+tooltip.value.handle.diamond=Diamond
+tooltip.value.handle.gold=Gold
+tooltip.value.handle.iron=Iron
+tooltip.value.handle.stone=Stone
+tooltip.value.handle.wood=Wood
+
+############
+## Config ##
+############
+gui.config.allTools=All tool varities
+config.desc.allTools=Decides whether or not to show all tool varities in the creative inventory
