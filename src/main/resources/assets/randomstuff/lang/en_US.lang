@@ -179,3 +179,9 @@ tooltip.value.handle.gold=Gold
 tooltip.value.handle.iron=Iron
 tooltip.value.handle.stone=Stone
 tooltip.value.handle.wood=Wood
+
+############
+## Config ##
+############
+gui.config.allTools=All tool varities
+config.desc.allTools=Decides whether or not to show all tool varities in the creative inventory

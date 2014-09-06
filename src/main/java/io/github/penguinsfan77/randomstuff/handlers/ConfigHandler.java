@@ -2,6 +2,7 @@ package io.github.penguinsfan77.randomstuff.handlers;
 
 import java.io.File;
 
+import net.minecraft.util.StatCollector;
 import net.minecraftforge.common.config.Configuration;
 import cpw.mods.fml.client.event.ConfigChangedEvent;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
@@ -10,6 +11,8 @@ import io.github.penguinsfan77.randomstuff.references.Reference;
 public class ConfigHandler {
 	
 	public static Configuration configuration;
+	
+	public static boolean allTools = false;
 
     public static void init(File configFile) {
     	
@@ -25,6 +28,7 @@ public class ConfigHandler {
     private static void loadConfiguration() {
 
     	//Load the config values from the file
+    	allTools = configuration.getBoolean("allToolVarities", Configuration.CATEGORY_GENERAL, false, StatCollector.translateToLocal("config.desc.allTools"), "gui.config.allTools");
     	
     	//Save config if it changed
         if (configuration.hasChanged())
