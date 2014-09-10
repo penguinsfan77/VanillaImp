@@ -8,10 +8,13 @@ import io.github.penguinsfan77.vanillaimprovements.references.Names;
 import io.github.penguinsfan77.vanillaimprovements.references.Textures;
 import io.github.penguinsfan77.vanillaimprovements.utilities.LogHelper;
 import net.minecraft.block.Block;
+import net.minecraft.client.renderer.texture.IIconRegister;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemColored;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
+import net.minecraft.world.World;
 
 public class ColoredPlanksItemBlock extends ItemColored {
 	
@@ -23,6 +26,11 @@ public class ColoredPlanksItemBlock extends ItemColored {
 		this.block = block;
 		this.setHasSubtypes(true);
 
+	}
+	
+	@Override
+	public boolean requiresMultipleRenderPasses() {
+		return true;
 	}
 	
 	@Override

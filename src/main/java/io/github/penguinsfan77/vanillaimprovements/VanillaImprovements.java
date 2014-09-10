@@ -28,8 +28,6 @@ name= Reference.MOD_NAME,
 version= Reference.VERSION,
 guiFactory= Reference.GUI_FACTORY_CLASS)
 public class VanillaImprovements {
-	
-	public static int itemVaraities = 0;
 
 	//Instance of the mod
 	@Mod.Instance(Reference.MOD_ID)
@@ -50,7 +48,6 @@ public class VanillaImprovements {
         //Register items and blocks
         ModItems.init();
         ModBlocks.init();
-        LogHelper.info(itemVaraities + " different items...");
         
     }
 
