@@ -17,9 +17,9 @@ buildscript {
 
 apply plugin: 'forge'
 
-version = "1.7.10-0.0.1"
-group= "io.github.penguinsfan77.randomstuff" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "randomstuff"
+version = "1.7.10-0.1"
+group= "io.github.penguinsfan77.vanillaimprovements" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = "VanillaImprovements"
 
 minecraft {
     version = "1.7.10-10.13.0.1208"
